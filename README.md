@@ -1,5 +1,3 @@
-# iMGMC - integrated Mouse Gut Metagenomic Catalog
-
 ![logo](/images/Protologger-logo.png)
 
 
