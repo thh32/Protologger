@@ -27,7 +27,7 @@ According to the latest version of the International Code on the Nomenclature of
 Therefore, Protologger provides all the necessary information for writing protologues, reducing the burden on cultivation experts for the validation of names for novel taxa.
 
 # Dataset
-We provide the Protologger output for four distinct datasets; the HBC (https://www.nature.com/articles/s41587-018-0009-7), the BIO-ML collection (https://www.nature.com/articles/s41591-019-0559-3), the Hungate1000 (https://www.nature.com/articles/nbt.4110) and the iMGMC (https://www.sciencedirect.com/science/article/pii/S2211124720301972?via%3Dihub). 
+We provide the Protologger output for four distinct datasets; the [HBC](https://www.nature.com/articles/s41587-018-0009-7), the [BIO-ML collection](https://www.nature.com/articles/s41591-019-0559-3), the [Hungate1000](https://www.nature.com/articles/nbt.4110) and the [iMGMC](https://www.sciencedirect.com/science/article/pii/S2211124720301972?via%3Dihub). 
 
 All datasets are downloadable [here](https://drive.google.com/file/d/1abNuXifhd2mH8txxkVhUO9MOZLcMETTb/view?usp=sharing)
 
