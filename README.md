@@ -36,8 +36,17 @@ All datasets are downloadable [here](https://drive.google.com/file/d/1abNuXifhd2
 # Citation
 We ask that anyone who uses Protologger cites not only our publication but the list of publications below which provide tools and databases which are integral for Protologgers working;
 
+## Tools
 - Living Tree Project (https://www.sciencedirect.com/science/article/abs/pii/S072320200800060X?via%3Dihub)
 - UCHIME (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
 - LPSN (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965054/pdf/gkt1111.pdf)
--GTDB-Tk (https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
+- GTDB-Tk (https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
+- MUSCLE ()
+- PROKKA ()
+- PRODIGAL ()
+
+## Databases 
+- CARD ()
+- CAZyme ()
+- KEGG ()
 
