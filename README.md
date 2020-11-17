@@ -49,7 +49,8 @@ We ask that anyone who uses Protologger cites not only our publication but the l
 - DIAMOND (https://www.nature.com/articles/nmeth.3176)
 - CheckM (https://genome.cshlp.org/content/25/7/1043)
 - fastANI (https://www.nature.com/articles/s41467-018-07641-9)
-
+- PhyloPhlAn3 (https://www.nature.com/articles/s41467-020-16366-7)
+- FastTree (https://academic.oup.com/mbe/article/26/7/1641/1128976)
 
 ## Databases 
 - CARD (https://academic.oup.com/nar/article/48/D1/D517/5608993)
