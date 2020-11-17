@@ -48,6 +48,7 @@ We ask that anyone who uses Protologger cites not only our publication but the l
 - blastN (https://www.sciencedirect.com/science/article/pii/S0022283605803602?via%3Dihub)
 - DIAMOND (https://www.nature.com/articles/nmeth.3176)
 - CheckM (https://genome.cshlp.org/content/25/7/1043)
+- fastANI (https://www.nature.com/articles/s41467-018-07641-9)
 
 
 ## Databases 
