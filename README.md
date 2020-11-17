@@ -36,7 +36,7 @@ All datasets are downloadable [here](https://drive.google.com/file/d/1abNuXifhd2
 # Citation
 We ask that anyone who uses Protologger cites not only our publication but the list of publications below which provide tools and databases which are integral for Protologgers working;
 
-## Tools
+### Tools
 - Living Tree Project (https://www.sciencedirect.com/science/article/abs/pii/S072320200800060X?via%3Dihub)
 - UCHIME (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
 - LPSN (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965054/pdf/gkt1111.pdf)
@@ -52,7 +52,7 @@ We ask that anyone who uses Protologger cites not only our publication but the l
 - PhyloPhlAn3 (https://www.nature.com/articles/s41467-020-16366-7)
 - FastTree (https://academic.oup.com/mbe/article/26/7/1641/1128976)
 
-## Databases 
+### Databases 
 - CARD (https://academic.oup.com/nar/article/48/D1/D517/5608993)
 - CAZyme (https://academic.oup.com/nar/article/37/suppl_1/D233/1003505)
 - KEGG (https://academic.oup.com/nar/article/27/1/29/1238108)
