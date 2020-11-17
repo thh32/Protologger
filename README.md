@@ -5,7 +5,7 @@
 
 Protologger is an all-in-one genome description tool, aimed at simplifying the process of gathering the data required for writing protologues. This includes providing; taxonomic, functional and ecological insights, described in detail below;
 
-Taxonomic placement
+### Taxonomic placement
 - 16S rRNA identity values
 - 16S rRNA gene phylogenetic tree
 - Taxonomic assignment based on GTDB (GTDB-Tk r89)
@@ -13,12 +13,12 @@ Taxonomic placement
 - ANI values (FastANI)
 - POCP values
 
-Functional analysis
+### Functional analysis
 - KEGG based pathway reconstruction
 - CAZyme profiling
 - Antibiotic resistance profiling (CARD)
 
-Ecological analysis
+### Ecological analysis
 - Prevalence and average relative abundance across 1,000 samples for 19 unique environments (IMNGS)
 - Occurence based on MASH comparison to a database of >50,000 MAGs from thousands of samples
 
