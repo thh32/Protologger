@@ -41,12 +41,19 @@ We ask that anyone who uses Protologger cites not only our publication but the l
 - UCHIME (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
 - LPSN (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965054/pdf/gkt1111.pdf)
 - GTDB-Tk (https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
-- MUSCLE ()
+- MUSCLE (https://academic.oup.com/nar/article/32/5/1792/2380623)
 - PROKKA ()
 - PRODIGAL ()
+- MASH ()
+- blastN ()
+- DIAMOND ()
+- CheckM ()
+
 
 ## Databases 
 - CARD ()
 - CAZyme ()
 - KEGG ()
+- IMNGS ecological samples
+- 
 
