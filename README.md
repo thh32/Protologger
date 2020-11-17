@@ -32,7 +32,7 @@ Within the publication we provide the Protologger output for four distinct datas
 The Protologger output from all three datasets are downloadable [here](https://drive.google.com/file/d/1abNuXifhd2mH8txxkVhUO9MOZLcMETTb/view?usp=sharing).
 
 ### ChiBAC - Chicken Bacterial Collection
-Protologger has been applied to characterise isolates from the chicken gut (CHiBAC), for which the entire Protologger outputs are available [here](https://drive.google.com/drive/folders/1OV2tc-oElldD_UubMi2aYqZ-SMxluONf?usp=sharing)
+Protologger has been applied to characterise isolates from the chicken gut (CHiBAC), for which the entire Protologger outputs are available [here](https://drive.google.com/file/d/19icEV9xH6PBiW1Mekd2duG6IJP3jf9HY/view?usp=sharing)
 
 
 # Citation
