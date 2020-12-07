@@ -58,6 +58,8 @@ Once the `bin` folder has been created, download the following code is used to c
 wget https://data.ace.uq.edu.au/public/gtdb/data/releases/release89/89.0/gtdbtk_r89_data.tar.gz
 tar xvzf gtdbtk_r89_data.tar.gz
 mv release89/fastani/database bin/Genome-database
+rm -r release89
+rm -r gtdbtk_r89_data.tar.gz
 ```
 The genome files themselves are usless without metadata. Use this [link](https://drive.google.com/file/d/1P4GFdPyv_82P6ydHHlWFhYsBB0Z6CDpt/view?usp=sharing) to download the current metadata file for GTDB and place it in the main `Protologger` folder, then run the code below;
 
