@@ -39,25 +39,25 @@ Protologger has been applied to characterise isolates from the chicken gut (CHiB
 We ask that anyone who uses Protologger cites not only our publication but the list of publications below which provide tools and databases which are integral for Protologgers working;
 
 ### Tools
-- Living Tree Project (https://www.sciencedirect.com/science/article/abs/pii/S072320200800060X?via%3Dihub)
-- UCHIME (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
-- LPSN (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965054/pdf/gkt1111.pdf)
-- GTDB-Tk (https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
-- MUSCLE (https://academic.oup.com/nar/article/32/5/1792/2380623)
-- PROKKA (https://academic.oup.com/bioinformatics/article/30/14/2068/2390517)
-- PRODIGAL (https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-119)
-- MASH (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x)
-- blastN (https://www.sciencedirect.com/science/article/pii/S0022283605803602?via%3Dihub)
-- DIAMOND (https://www.nature.com/articles/nmeth.3176)
-- CheckM (https://genome.cshlp.org/content/25/7/1043)
-- FastANI (https://www.nature.com/articles/s41467-018-07641-9)
-- PhyloPhlAn3 (https://www.nature.com/articles/s41467-020-16366-7)
-- FastTree (https://academic.oup.com/mbe/article/26/7/1641/1128976)
+- [Living Tree Project](https://www.sciencedirect.com/science/article/abs/pii/S072320200800060X?via%3Dihub)
+- [UCHIME](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
+- [LPSN](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965054/pdf/gkt1111.pdf)
+- [GTDB-Tk](https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
+- [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
+- [PROKKA](https://academic.oup.com/bioinformatics/article/30/14/2068/2390517)
+- [PRODIGAL](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-119)
+- [MASH](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x)
+- [blastN](https://www.sciencedirect.com/science/article/pii/S0022283605803602?via%3Dihub)
+- [DIAMOND](https://www.nature.com/articles/nmeth.3176)
+- [CheckM](https://genome.cshlp.org/content/25/7/1043)
+- [FastANI](https://www.nature.com/articles/s41467-018-07641-9)
+- [PhyloPhlAn3](https://www.nature.com/articles/s41467-020-16366-7)
+- [FastTree](https://academic.oup.com/mbe/article/26/7/1641/1128976)
 
 ### Databases 
-- CARD (https://academic.oup.com/nar/article/48/D1/D517/5608993)
-- CAZyme (https://academic.oup.com/nar/article/37/suppl_1/D233/1003505)
-- KEGG (https://academic.oup.com/nar/article/27/1/29/1238108)
-- IMNGS amplicon samples (https://www.nature.com/articles/srep33721)
+- [CARD](https://academic.oup.com/nar/article/48/D1/D517/5608993)
+- [CAZyme](https://academic.oup.com/nar/article/37/suppl_1/D233/1003505)
+- [KEGG](https://academic.oup.com/nar/article/27/1/29/1238108)
+- [IMNGS amplicon samples](https://www.nature.com/articles/srep33721)
 
 
