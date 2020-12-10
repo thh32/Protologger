@@ -42,6 +42,10 @@ Before installating Protologger, all the dependancies below must be installed;
 - [PhyloPhlAn3](https://www.nature.com/articles/s41467-020-16366-7)
 - [FastTree](https://academic.oup.com/mbe/article/26/7/1641/1128976)
 
+Additional python(2.7) modules used by Protologger that must be installed are;
+- HTSeq
+- NumPy
+
 Once the denpendancies have been installed, we recommend using the following commands to install Protologger as absolute paths are utilised;
 
 ```
