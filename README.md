@@ -78,7 +78,7 @@ When running Protologger, you must provide both your 16S rRNA gene sequence and 
 
 Next, run Protologger as shown;
 
-```python2.7 Protolgoger-v0.98.py 16S_gene.fa GENOME.fa```
+```python2.7 protolgoger-0.98.py 16S_gene.fa GENOME.fa```
 
 
 # Dataset
