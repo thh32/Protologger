@@ -32,6 +32,8 @@ Therefore, Protologger provides all the necessary information for writing protol
 
 If you have single isolates that you wish to study, why not use our Galaxy web-server which, freely available at; http://protologger.de/
 
+Included on our website is an implementation of GAN (The Great Automatic Nomenclator) (https://github.com/telatin/gan) which accepts Protologger output to generate ecological and functionally informed names.
+
 
 ## Conda
 
