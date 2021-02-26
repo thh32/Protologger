@@ -28,6 +28,11 @@ Therefore, Protologger provides all the necessary information for writing protol
 
 # Installation
 
+## Web-server
+
+If you have single isolates that you wish to study, why not use our Galaxy web-server which, freely available at; http://protologger.de/
+
+
 ## Conda
 
 Under development
