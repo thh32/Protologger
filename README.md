@@ -28,6 +28,13 @@ Therefore, Protologger provides all the necessary information for writing protol
 
 # Installation
 
+## Conda
+
+Under development
+
+
+## Manual installation
+
 Before installating Protologger, all the dependancies below must be installed;
 - [UCHIME](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
 - [GTDB-Tk](https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
@@ -81,7 +88,7 @@ Next, run Protologger as shown;
 ```python2.7 protolgoger-0.98.py 16S_gene.fa GENOME.fa```
 
 
-# Dataset
+# Datasets
 Within the publication we provide the Protologger output for four distinct datasets; the [HBC](https://www.nature.com/articles/s41587-018-0009-7), the [BIO-ML collection](https://www.nature.com/articles/s41591-019-0559-3), the [Hungate1000](https://www.nature.com/articles/nbt.4110) and the [iMGMC](https://www.sciencedirect.com/science/article/pii/S2211124720301972?via%3Dihub). 
 
 The Protologger output from all four datasets are downloadable [here](https://drive.google.com/file/d/1abNuXifhd2mH8txxkVhUO9MOZLcMETTb/view?usp=sharing).
