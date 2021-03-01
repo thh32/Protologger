@@ -39,6 +39,8 @@ Included on our website is an implementation of GAN (The Great Automatic Nomencl
 
 Under development
 
+Protologger currently utilises r89 of the GTDB database and LTP v132 as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
+
 
 ## Manual installation
 
