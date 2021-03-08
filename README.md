@@ -39,7 +39,11 @@ Included on our website is an implementation of GAN (The Great Automatic Nomencl
 
 Due to the use of both Python 2.7 and Python 3 within Protologger a Conda package has not been made, instead we offer an alternative solution via a conda environment.
 
-For this you must first have both `conda` and `git` installed and move to the folder in which you wish to host the Protologger databases (~50Gb).
+For this you must first have both `conda` and `git` installed.
+
+Download the setup-protologger-env.sh file, [here](https://github.com/thh32/Protologger/blob/master/scripts/setup-protologger-env.sh).
+
+Move this script to the folder in which you wish to host the Protologger databases (~50Gb).
 
 Next, download this repository using the command; `git clone https://github.com/thh32/Protologger`
 
@@ -49,7 +53,7 @@ This script creates a conda environment called `protologger` that has all the re
 
 Within this script all the databases for Protologger are downloaded and can be updated at any time using the command; `protologger-update.sh`.
 
-Protologger currently utilises r89 of the GTDB database and LTP v132 as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
+Protologger currently utilises r89 of the genome taxonomy database (GTDB) and the Living Tree Project (LTP v132) as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
 
 
 ## Manual installation
