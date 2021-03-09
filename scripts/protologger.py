@@ -487,21 +487,25 @@ process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 
 output, error = process.communicate()
 
-print output
-print error
-print output.split('\n')
+print '1. ', output
+print  '2. ',error
+print  '3. ',output.split('\n')
+print  '4. ',output.split('\n')[-4:][0]
+print  '5. ',output.split('\n')[-4:][0].split(' ')
 
 reduced_checkm = []
 
-for i in output.split('\n')[3].split(' '):
+for i in output.split('\n')[-4:][0].split(' '):
     print i
     if i == '':
         qwep = 0
     else:
         reduced_checkm.append(i)
 
+print  '6. ',reduced_checkm
 complete = float(reduced_checkm[12])
 contamination = float(reduced_checkm[13])
+
 
 
 if complete > 95.0:
