@@ -49,6 +49,8 @@ Run the command `. setup-protologger-env.sh` and wait, the installation process 
 
 This script creates a conda environment called `protologger` that has all the required tools pre-installed, apart from Usearch (v5.2.32), which must be installed manually. Make sure that the usearch executable is in your $PATH so it can be called using `usearch`.
 
+<b> IT IS INSTALLED!</b> You now have access to your own installation of Protologger, but be aware, Protologger is very RAM hungry and our own version is run on a machine with 500Gb RAM and 52 cores.
+
 You can update the databases used by Protologger at any point using the command; `protologger-update.sh`.
 
 Protologger currently utilises r89 of the genome taxonomy database (GTDB) and the Living Tree Project (LTP v132) as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
