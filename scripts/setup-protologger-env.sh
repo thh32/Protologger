@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set -e 
+
 echo 'Starting....'
 echo $PWD
 git clone https://github.com/thh32/Protologger
@@ -68,9 +70,7 @@ cd ../../
 echo "7. Download Uniprot database for KEGG analysis"
 mkdir -p ${PROTOLOGGER_DATA_DIR}/KEGG-analysis
 cd ${PROTOLOGGER_DATA_DIR}/KEGG-analysis
-wget -O "idmapping.dat.gz" "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/idmapping/idmapping.dat.gz"
-gzip -dc idmapping.dat.gz | awk '{if($2=="KO") print ​$1,$3}' OFS="\t" | gzip > idmapping_KO.tab.gz
-rm -r idmapping.dat.gz
+wget -O "idmapping_KO.tab.gz" "https://github.com/SilentGene/Bio-py/blob/master/prokka2kegg/idmapping_KO.tab.gz"
 cd ../../
 echo "7. Uniprot database integrated."
 
