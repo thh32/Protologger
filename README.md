@@ -55,6 +55,17 @@ You can update the databases used by Protologger at any point using the command;
 
 Protologger currently utilises r89 of the genome taxonomy database (GTDB) and the Living Tree Project (LTP v132) as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
 
+# Usage
+
+Protologger requires three inputs to be run on the commandline, detailed below.
+
+| Option command| File type | Description                                                                                              |
+| ------------- | -------------------------------------------------------------------------------------------------------- |
+| -s     | Nucleotide FASTA file | Provide a file containing the 16S rRNA gene sequence for your species of interest           |
+| -g    | Nucleotide FASTA file | Provide the genome file of your species of interest                                                    |
+| -p       | String | Provide the name of your project which will be used to name your input and output folders                                               |
+
+
 
 # Datasets
 Within the publication we provide the Protologger output for four distinct datasets; the [HBC](https://www.nature.com/articles/s41587-018-0009-7), the [BIO-ML collection](https://www.nature.com/articles/s41591-019-0559-3), the [Hungate1000](https://www.nature.com/articles/nbt.4110) and the [iMGMC](https://www.sciencedirect.com/science/article/pii/S2211124720301972?via%3Dihub). 
