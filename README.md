@@ -56,61 +56,6 @@ You can update the databases used by Protologger at any point using the command;
 Protologger currently utilises r89 of the genome taxonomy database (GTDB) and the Living Tree Project (LTP v132) as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
 
 
-## Manual installation
-
-Before installating Protologger, all the dependancies below must be installed;
-- [UCHIME](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150044/pdf/btr381.pdf)
-- [GTDB-Tk](https://academic.oup.com/bioinformatics/article/36/6/1925/5626182)
-- [MUSCLE](https://academic.oup.com/nar/article/32/5/1792/2380623)
-- [PROKKA](https://academic.oup.com/bioinformatics/article/30/14/2068/2390517)
-- [PRODIGAL](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-119)
-- [MASH](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x)
-- [blastN](https://www.sciencedirect.com/science/article/pii/S0022283605803602?via%3Dihub)
-- [DIAMOND](https://www.nature.com/articles/nmeth.3176)
-- [CheckM](https://genome.cshlp.org/content/25/7/1043)
-- [FastANI](https://www.nature.com/articles/s41467-018-07641-9)
-- [PhyloPhlAn3](https://www.nature.com/articles/s41467-020-16366-7)
-- [FastTree](https://academic.oup.com/mbe/article/26/7/1641/1128976)
-
-Additional python(2.7) modules used by Protologger that must be installed are;
-- HTSeq
-- NumPy
-
-Once the denpendancies have been installed, we recommend using the following commands to install Protologger as absolute paths are utilised;
-
-```
-mkdir Protologger
-cd Protologger
-mkdir Input
-mkdir Output
-```
-
-Now, download the following file, [link](https://drive.google.com/file/d/1T_GvXV0Dt4_v1BG-Ng88xpvgGIE5pNKn/view?usp=sharing), and place it in the main `Protologger` folder, once there, untar it to create the `bin` folder;
-
-Once the `bin` folder has been created, download the following code is used to create the Genome database (using the GTDB-Tk database);
-```
-wget https://data.ace.uq.edu.au/public/gtdb/data/releases/release89/89.0/gtdbtk_r89_data.tar.gz
-tar xvzf gtdbtk_r89_data.tar.gz
-mv release89/fastani/database bin/Genome-database
-rm -r release89
-rm -r gtdbtk_r89_data.tar.gz
-```
-The genome files themselves are usless without metadata. Use this [link](https://drive.google.com/file/d/1P4GFdPyv_82P6ydHHlWFhYsBB0Z6CDpt/view?usp=sharing) to download the current metadata file for GTDB and place it in the main `Protologger` folder, then run the code below;
-
-```
-mkdir bin/GTDB-TK
-mv bac120_metadata_r89.tsv bin/GTDB-TK/bac120_metadata_r89.tsv
-```
-
-Download the main Protologger script in this repository and place it in the main Protologger folder.
-
-When running Protologger, you must provide both your 16S rRNA gene sequence and genome files which will be moved into a folder, named after the genome file, inside the `Input` folder.
-
-Next, run Protologger as shown;
-
-```python2.7 protolgoger-0.98.py 16S_gene.fa GENOME.fa```
-
-
 # Datasets
 Within the publication we provide the Protologger output for four distinct datasets; the [HBC](https://www.nature.com/articles/s41587-018-0009-7), the [BIO-ML collection](https://www.nature.com/articles/s41591-019-0559-3), the [Hungate1000](https://www.nature.com/articles/nbt.4110) and the [iMGMC](https://www.sciencedirect.com/science/article/pii/S2211124720301972?via%3Dihub). 
 
