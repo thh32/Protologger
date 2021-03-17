@@ -60,7 +60,7 @@ Protologger currently utilises r89 of the genome taxonomy database (GTDB) and th
 Protologger requires three inputs to be run on the commandline, detailed below.
 
 | Option command| File type | Description                                                                                              |
-| ------------- | -------------------------------------------------------------------------------------------------------- |
+| ------------- | ---------| -------------------------------------------------------------------------------------------------------- |
 | -s     | Nucleotide FASTA file | Provide a file containing the 16S rRNA gene sequence for your species of interest           |
 | -g    | Nucleotide FASTA file | Provide the genome file of your species of interest                                                    |
 | -p       | String | Provide the name of your project which will be used to name your input and output folders                                               |
