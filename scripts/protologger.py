@@ -1878,6 +1878,78 @@ for ko in brite_groups['ko01000']:
 #print 'Number of unique enzymes; ' + str(enzymes)
 outputting_overview.write('Number of unique enzymes; ' + str(enzymes)+'\n')
 
+# Anoxygenic photosystem I
+
+if 'K08940'in KOs:
+	if 'K08941' in KOs:
+		if 'K08942' in KOs:
+			if 'K08943' in KOs:
+				outputting_overview.write('Anoxygenic photosystem I was predicted from the genome (pscA, pscB, pscC, pscD)\n')
+
+# Anoxygenic photosystem II
+
+if 'K08928'in KOs:
+	if 'K08929' in KOs:
+		outputting_overview.write('Anoxygenic photosystem II was predicted from the genome (pufL, pufM)\n')
+
+		
+		
+# Methanogenesis, CO2 -> methane
+methanogensis = []
+if 'K00200' in KOs:
+	if 'K00201' in KOs:
+		if 'K00202' in KOs:
+			if 'K00203' in KOs:
+				if 'K00205' in KOs or 'K11260' in KOs or 'K00204' in KOs:
+					methanogensis.append('1.2.99.5')
+
+if 'K00672' in KOs:
+	methanogensis.append('2.3.1.101')
+
+if 'K01499' in KOs:
+	methanogensis.append('3.5.4.27')
+
+if 'K00319' in KOs:
+	methanogensis.append('1.5.99.9')
+if 'K13942' in KOs:
+	methanogensis.append('1.12.98.2')
+
+
+if 'K00320' in KOs:
+	methanogensis.append('1.5.99.11')
+	
+if 'K00577' in KOs:
+	if 'K00578' in KOs:
+		if 'K00579' in KOs:
+			if 'K00580' in KOs:
+				if 'K00581' in KOs:
+					methanogensis.append('2.1.1.86')
+					
+if 'K00399' in KOs:
+	if 'K00401' in KOs:
+		if 'K00402' in KOs:
+			methanogensis.append('2.8.4.1')
+
+if len(methanogensis) == 7:
+	outputting_overview.write('Methane production from CO2 was predicted from the genome (EC:1.2.99.5, 2.3.1.101, 3.5.4.27, 1.5.99.9, 1.12.98.2, 1.5.99.11, 2.1.1.86, 2.8.4.1)\n')
+
+
+# Reductive pentose phosphate cycle
+
+if 'K00855' in KOs: 
+	if 'K01601' in KOs: 
+		if 'K00927' in KOs: 
+			if 'K05298' in KOs and 'K00150' in KOs and 'K00134' in KOs: 
+				if 'K01623' in KOs and 'K01624' in KOs:
+					if 'K03841' in KOs and 'K02446' in KOs and 'K11532' in KOs and 'K01086' in KOs:
+						if 'K00615' in KOs: 
+							if 'K01623' in KOs and 'K01624' in KOs:
+								if 'K01100' in KOs and 'K11532' in KOs and 'K01086' in KOs:
+									if 'K00615' in KOs: 
+										if 'K01807' in KOs and 'K01808' in KOs:
+											outputt.write('The reductive pentose phosphate cycle (Calvin cycle) was predicted in the genome (EC:2.7.1.19, 4.1.1.39, 2.7.2.3, 1.2.1.13, 1.2.1.59, 1.2.1.12, 4.1.2.13, 3.1.3.11, 2.2.1.1, 3.1.3.37, 5.3.1.6).')
+
+
 
 
 # Siroheme biosynthesis
