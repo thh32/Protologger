@@ -1338,7 +1338,7 @@ for line in open(dir_path + 'Output/'+project_name+'/ANI_values.tab','r'):
         
 if matches == 0:
     #print 'No valid species with a sequenced genome within the GTDB-TK database was identified to have a ANI value >95% with the studied genome'
-    outputting_overview.write('No valid species with a sequenced genome within the GTDB-TK database was identified to have a ANI value >95% with the studied genome'+'\n')
+    outputting_overview.write('No validly named species with a sequenced genome within the GTDB-TK database was identified to have a ANI value >95% with the studied genome'+'\n')
 
 
 
