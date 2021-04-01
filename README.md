@@ -72,8 +72,41 @@ Within the publication we provide the Protologger output for four distinct datas
 
 The Protologger output from all four datasets are downloadable [here](https://drive.google.com/file/d/1abNuXifhd2mH8txxkVhUO9MOZLcMETTb/view?usp=sharing).
 
+
 ### ChiBAC - Chicken Bacterial Collection
 Protologger has been applied to characterise isolates from the chicken gut (CHiBAC), for which the entire Protologger outputs are available [here](https://drive.google.com/file/d/19icEV9xH6PBiW1Mekd2duG6IJP3jf9HY/view?usp=sharing)
+
+
+## MAG datasets
+
+We always aim to expand the MAG database used within Protologger. If there is an additional dataset you wish included, please <a href="admin@protologger.de">contact us</a>
+
+The list of currently included datasets (numbers represent Bacterial and Archaeal numbers) is as follows;
+
+| Publication  | Number of MAGs | Description                                                                                              |
+| ------------- | ---------| -------------------------------------------------------------------------------------------------------- |
+| Parks et al (2020)     | 3,397 | Generic           |
+| Woodcraft et al (2018)    | 568 | Permafrost                                                   |
+| Anantharaman et al (2016)       | 303 | Groundwater                                               |
+| Crits-Cristoph et al (2018)       | 225 | Soil                                               |
+| Dombrowski et al (2018)       | 36 | Hydro-thermal sediment                                               |
+| Tully et al (2018)       | 339 | Ocean                                               |
+| Lesker et al (2020)       | 831 | Mouse gut                                            |
+| Wylensek et al (2020)       | 589 | Pig gut                                               |
+| Stewart et al (2018)       | 488 | Bovine rumen                                               |
+| Almeida et al (2019)       | 39,891 | Human gut                                               |
+| Pasolli et al (2019)       | 225 | Human stool/vagina/skin/oral cavity                                               |
+| Manara et al (2019)       | 1,008 | soil                                               |
+
+
+The list of datasets currently undergoing integration are;
+
+| Publication  | Number of MAGs | Description                                                                                              |
+| ------------- | ---------| -------------------------------------------------------------------------------------------------------- |
+| Wilkinson et al (2020)     | 3,397 | African Boran rumen           |
+| Chen et al (2021)     | 1,358 | Pig gut           |
+| Albanese et al (2021)     | 263 | Cryptoendolithic community in Antarctica           |
+| Levin et al (2021)     | 1,209 | Gut of 180  wild species           |
 
 
 # Citation
