@@ -79,7 +79,7 @@ Protologger has been applied to characterise isolates from the chicken gut (CHiB
 
 ## MAG datasets
 
-We always aim to expand the MAG database used within Protologger. If there is an additional dataset you wish included, please <a href="admin@protologger.de">contact us</a>
+We always aim to expand the MAG database used within Protologger. If there is an additional dataset you wish included, please contact us at; admin@protologger.de
 
 The list of currently included datasets (numbers represent Bacterial and Archaeal numbers) is as follows;
 
