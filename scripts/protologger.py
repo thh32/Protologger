@@ -18,9 +18,9 @@ import time
 import pickle
 import random
 import string
+from datetime import date
 
-
-
+today = date.today()
 
 
 
@@ -386,10 +386,15 @@ outputting.close()
 
 
 
+#############################################
+# 
+#       Print version
+#
+#######################
 
 
 
-
+outputting_overview.write('Protologger v0.99; Run date: ' + str(today) + '\n')
 
 
 
