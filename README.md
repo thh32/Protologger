@@ -107,6 +107,7 @@ The list of datasets currently undergoing integration are;
 | Chen et al (2021)     | 1,358 | Pig gut           |
 | Albanese et al (2021)     | 263 | Cryptoendolithic community in Antarctica           |
 | Levin et al (2021)     | 1,209 | Gut of 180  wild species           |
+| Jegousse et al (2021)     | 219 | Icelandic marine water           |
 
 
 # Citation
