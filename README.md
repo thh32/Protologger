@@ -113,6 +113,8 @@ The list of datasets currently undergoing integration are;
 | Collins et al (2021)     | 111 | Deep sea fish gut            |
 | Nayfach et al (2021)     | 52,515 | Earth associated microbiota           |
 | Becraft et al (2021)     | 126 | Deep subsurface            |
+| Krüger et al (2019)     | 3101 | Algae blooms             |
+| Lavrinienko et al (2020)     | 254 | Bank vole gut            |
 
 
 # Citation
