@@ -108,6 +108,11 @@ The list of datasets currently undergoing integration are;
 | Albanese et al (2021)     | 263 | Cryptoendolithic community in Antarctica           |
 | Levin et al (2021)     | 1,209 | Gut of 180  wild species           |
 | Jegousse et al (2021)     | 219 | Icelandic marine water           |
+| Robbins et al (2021)     | ~1200 | Coral sponge           |
+| Wibowo et al (2021)     | 498 | Ancient human gut            |
+| Collins et al (2021)     | 111 | Deep sea fish gut            |
+| Nayfach et al (2021)     | 52,515 | Earth associated microbiota           |
+| Becraft et al (2021)     | 126 | Deep subsurface            |
 
 
 # Citation
