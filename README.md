@@ -118,6 +118,8 @@ The list of datasets currently undergoing integration are;
 
 
 # Citation
+Hitch, T.C.A., Riedel, T., Oren, A. et al. Automated analysis of genomic sequences facilitates high-throughput and comprehensive description of bacteria. ISME COMMUN. 1, 16 (2021). https://doi.org/10.1038/s43705-021-00017-z
+
 We ask that anyone who uses Protologger cites not only our publication but the list of publications below which provide tools and databases which are integral for Protologgers working;
 
 ### Tools
