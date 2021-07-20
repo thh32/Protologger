@@ -22,6 +22,11 @@ Protologger is an all-in-one genome description tool, aimed at simplifying the p
 - Prevalence and average relative abundance across 1,000 samples for 19 unique environments (IMNGS)
 - Occurence based on MASH comparison to a database of >50,000 MAGs from thousands of samples
 
+
+# Reference
+Hitch, T.C.A., Riedel, T., Oren, A. et al. Automated analysis of genomic sequences facilitates high-throughput and comprehensive description of bacteria. ISME Communications. 1, 16 (2021). https://doi.org/10.1038/s43705-021-00017-z
+
+
 # What are protologues and why are they needed?
 According to the latest version of the International Code on the Nomenclature of Prokaryotes (ICNP), publication of a novel taxa must include a description of that taxas' features. The format of this information is termed a 'protologue', of which some examples are provided on the example page. Whilst the ICNP are vague on the specifics of what should be included, generally protologues include; the functional features, isolation source and taxonomic placement of the species in relation to existing validly named taxa.
 Therefore, Protologger provides all the necessary information for writing protologues, reducing the burden on cultivation experts for the validation of names for novel taxa.
