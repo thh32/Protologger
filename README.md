@@ -42,33 +42,26 @@ Included on our website is an implementation of GAN (The Great Automatic Nomencl
 
 ## Conda environment
 
-Due to the use of both Python 2.7 and Python 3 within Protologger a Conda package has not been made, instead we offer an alternative solution via a conda environment.
+Protologger has been re-written in python3 for easy conda installation.
 
-For this you must first have both `conda` and `git` installed.
+There are three steps that are required to get Protologger working;
 
-Download the setup-protologger-env.sh file, [here](https://github.com/thh32/Protologger/blob/master/scripts/setup-protologger-env.sh).
+1. Create a python3 environment using the command; `conda create -n protologger python=3.7 prokka`
+2. Install Protologger into this environment; `conda install -c thitch protologger`
+3. Once installed, the databases must be downloaded using the following command; `setup-protologger.sh`
 
-Move this script to the folder in which you wish to host the Protologger databases (~50Gb).
-
-Run the command `. setup-protologger-env.sh` and wait, the installation process takes ~2-3 hours, depending on your internet connection as multiple databases must be downloaded.
-
-This script creates a conda environment called `protologger` that has all the required tools pre-installed, apart from Usearch (v5.2.32), which must be installed manually. Make sure that the usearch executable is in your $PATH so it can be called using `usearch`.
-
-<b> IT IS INSTALLED!</b> You now have access to your own installation of Protologger, but be aware, Protologger is very RAM hungry and our own version is run on a machine with 500Gb RAM and 52 cores.
-
-You can update the databases used by Protologger at any point using the command; `protologger-update.sh`.
-
-Protologger currently utilises r89 of the genome taxonomy database (GTDB) and the Living Tree Project (LTP v132) as base databases and all code is designed around these. Further updates will be implemented for GTDB r95 soon.
+When finished (~5 hours depending on your internet speed), Protologger will be ready to run. Additionally, the command `protologger-update.sh` can be run to download the latest validation list which is updated monthly.
 
 # Usage
 
-Protologger requires three inputs to be run on the commandline, detailed below.
+Protologger.py requires three inputs to be run on the commandline, detailed below.
 
 | Input flag | File type | Description                                                                                              |
 | ------------- | ---------| -------------------------------------------------------------------------------------------------------- |
-| -s     | Nucleotide FASTA file | Provide a file containing the 16S rRNA gene sequence for your species of interest           |
+| -r     | Nucleotide FASTA file | Provide a file containing the 16S rRNA gene sequence for your species of interest           |
 | -g    | Nucleotide FASTA file | Provide the genome file of your species of interest                                                    |
 | -p       | String | Provide the name of your project which will be used to name your input and output folders                                               |
+| -q       | NA | This option activates 'quick' mode which ignores both GTDB-Tk and PhyloPhlAn analysis, meaning Protologger can be run on a desktop PC                                               |
 
 
 
