@@ -44,11 +44,12 @@ Included on our website is an implementation of GAN (The Great Automatic Nomencl
 
 Protologger has been re-written in python3 for easy conda installation.
 
-There are three steps that are required to get Protologger working;
+There are four steps that are required to get Protologger working;
 
 1. Create a python3 environment using the command; `conda create -n protologger python=3.7 prokka`
 2. Install Protologger into this environment; `conda install -c thitch protologger`
 3. Once installed, the databases must be downloaded using the following command; `setup-protologger.sh`
+4. Make sure you have Usearch installed (version 5.2.32 is the tested version) and is in your $PATH
 
 When finished (~5 hours depending on your internet speed), Protologger will be ready to run. Additionally, the command `protologger-update.sh` can be run to download the latest validation list which is updated monthly.
 
