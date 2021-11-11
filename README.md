@@ -53,6 +53,14 @@ There are four steps that are required to get Protologger working;
 
 When finished (~5 hours depending on your internet speed), Protologger will be ready to run. Additionally, the command `protologger-update.sh` can be run to download the latest validation list which is updated monthly.
 
+If PROKKA has issues please try the following commands;
+```
+export PERL5LIB=$CONDA_PREFIX/lib/perl5/site_perl/5.22.0/
+conda remove blast 
+conda install -c bioconda blast=2.9.0
+conda install -c conda-forge -c bioconda -c defaults prokka
+```
+
 # Usage
 
 Protologger.py requires three inputs to be run on the commandline, detailed below.
