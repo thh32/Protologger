@@ -42,7 +42,7 @@ Included on our website is an implementation of GAN (The Great Automatic Nomencl
 
 ## Conda environment
 
-Protologger has been re-written in python3 for easy conda installation.
+Protologger has been re-written in python3 for easy conda installation on linux systems.
 
 There are four steps that are required to get Protologger working;
 
