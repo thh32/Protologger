@@ -544,7 +544,7 @@ else:
 
     reduced_checkm = []
 
-    for i in output.decode("utf-8").split('\n')[36].split(' '):
+    for i in output.decode("utf-8").split('\n')[37].split(' '):
         #print (i)
         if i == '':
             qwep = 0
