@@ -245,6 +245,7 @@ Acidovorax	temperans
 Acidovorax	valerianellae
 Acidovorax	wautersii
 Acinetobacter	albensis
+Acinetobacter	amyesii
 Acinetobacter	apis
 Acinetobacter	baretiae
 Acinetobacter	baumannii
@@ -322,6 +323,7 @@ Acinetobacter	venetianus
 Acinetobacter	vivianii
 Acinetobacter	wanghuae
 Acinetobacter	wuhouensis
+Acrocarpospora	catenulata
 Acrocarpospora	corrugata
 Acrocarpospora	macrocephala
 Acrocarpospora	phusangensis
@@ -335,6 +337,18 @@ Actibacterium	naphthalenivorans
 Actibacterium	pelagium
 Actibacterium	ureilyticum
 Actimicrobium	antarcticum
+Actinacidiphila	acididurans
+Actinacidiphila	alni
+Actinacidiphila	bryophytorum
+Actinacidiphila	epipremni
+Actinacidiphila	glaucinigra
+Actinacidiphila	guanduensis
+Actinacidiphila	oryziradicis
+Actinacidiphila	paucisporea
+Actinacidiphila	rubida
+Actinacidiphila	soli
+Actinacidiphila	yanglinensis
+Actinacidiphila	yeochonensis
 Actinaurispora	siamensis
 Actinoallomurus	acaciae
 Actinoallomurus	acanthiterrae
@@ -712,6 +726,7 @@ Actinotignum	schaalii
 Actinotignum	urinale
 Actirhodobacter	atriluteus
 Acutalibacter	muris
+Acuticoccus	kalidii
 Acuticoccus	kandeliae
 Acuticoccus	mangrovi
 Acuticoccus	sediminis
@@ -744,6 +759,7 @@ Advenella	mimigardefordensis
 Aedoeadaptatus	acetigenes
 Aegeococcus	anagnostidisi
 Aegeococcus	thureti
+Aegicerativicinus	sediminis
 Aegyptianella	pullorum
 Aeoliella	mucimassa
 Aequoribacter	fuscus
@@ -859,6 +875,7 @@ Aestuariihabitans	beolgyonensis
 Aestuariimicrobium	kwangyangense
 Aestuariimicrobium	soli
 Aestuariimonas	insulae
+Aestuariirhabdus	haliotis
 Aestuariirhabdus	litorea
 Aestuariisphingobium	litorale
 Aestuariispira	insulae
@@ -1245,6 +1262,7 @@ Aliterella	compacta
 Aliterella	gigantea
 Aliterella	shaanxiensis
 Alitiscatomonas	aceti
+Alkalibacillus	aidingensis
 Alkalibacillus	almallahensis
 Alkalibacillus	filiformis
 Alkalibacillus	flavidus
@@ -1477,6 +1495,7 @@ Alteribacillus	iranensis
 Alteribacillus	persepolensis
 Alteribacter	aurantiacus
 Alteribacter	keqinensis
+Alteribacter	lacisalsi
 Alteribacter	natronophilus
 Alteribacter	populi
 Altericista	lacusladogae
@@ -1489,6 +1508,7 @@ Altericroceibacterium	xinjiangense
 Alterinioella	nitratireducens
 Alteripontixanthobacter	maritimus
 Alteripontixanthobacter	muriae
+Alteriqipengyuania	abyssalis
 Alteriqipengyuania	halimionae
 Alteriqipengyuania	lutimaris
 Alternantia	serra
@@ -1618,6 +1638,7 @@ Amphiheterocytum	lacustre
 Amphiplicatus	metriothermophilus
 Amphirytos	necridicus
 Amphithrix	janthina
+Amphithrix	violacea
 Amphritea	atlantica
 Amphritea	balenae
 Amphritea	ceti
@@ -1637,6 +1658,7 @@ Amycolata	saturnea
 Amycolatopsis	acidicola
 Amycolatopsis	acididurans
 Amycolatopsis	acidiphila
+Amycolatopsis	aidingensis
 Amycolatopsis	alba
 Amycolatopsis	albidoflava
 Amycolatopsis	albidoflavus
@@ -1901,6 +1923,9 @@ Anaeromonas	frigoriresistens
 Anaeromonas	gelatinilytica
 Anaeromusa	acidaminophila
 Anaeromyxobacter	dehalogenans
+Anaeromyxobacter	diazotrophicus
+Anaeromyxobacter	oryzae
+Anaeromyxobacter	paludicola
 Anaerophaga	thermohalophila
 Anaeroplasma	abactoclasticum
 Anaeroplasma	bactoclasticum
@@ -2103,6 +2128,7 @@ Apibacter	mensalis
 Apibacter	muscae
 Apibacter	raozihei
 Apilactobacillus	apinorum
+Apilactobacillus	apisilvae
 Apilactobacillus	bombintestini
 Apilactobacillus	kosoi
 Apilactobacillus	kunkeei
@@ -2179,6 +2205,7 @@ Aquiflexum	balticum
 Aquiflexum	lacus
 Aquihabitans	daechungensis
 Aquiluna	borgnonia
+Aquimarina	acroporae
 Aquimarina	addita
 Aquimarina	agarilytica
 Aquimarina	agarivorans
@@ -2217,8 +2244,10 @@ Aquipuribacter	hungaricus
 Aquipuribacter	nitratireducens
 Aquirhabdus	parva
 Aquirufa	antheringensis
+Aquirufa	aurantiipilula
 Aquirufa	beregesia
 Aquirufa	ecclesiirivi
+Aquirufa	lenticrescens
 Aquirufa	nivalisilvae
 Aquirufa	rosea
 Aquisalibacillus	elongatus
@@ -2247,6 +2276,7 @@ Arcanobacterium	bernardiae
 Arcanobacterium	bialowiezense
 Arcanobacterium	bonasi
 Arcanobacterium	bovis
+Arcanobacterium	buesumense
 Arcanobacterium	canis
 Arcanobacterium	haemolyticum
 Arcanobacterium	hippocoleae
@@ -2457,6 +2487,7 @@ Arthrobacter	picolinophilus
 Arthrobacter	pigmenti
 Arthrobacter	pityocampae
 Arthrobacter	pokkalii
+Arthrobacter	polaris
 Arthrobacter	polychromogenes
 Arthrobacter	protophormiae
 Arthrobacter	psychrochitiniphilus
@@ -2529,6 +2560,7 @@ Ascidiaceihabitans	donghaensis
 Ascidiimonas	aurantiaca
 Asinibacterium	lactis
 Askenasya	polymorpha
+Aspalatia	crassior
 Asprobacter	aquaticus
 Aspromonas	composti
 Asterocapsa	gloeotheceformis
@@ -3372,6 +3404,7 @@ Bergeyella	zoohelcum
 Bermanella	marisrubri
 Bernardetia	litoralis
 Berryella	intestinalis
+Berryella	wangjianweii
 Beutenbergia	cavernae
 Bhargavaea	beijingensis
 Bhargavaea	cecembensis
@@ -3560,6 +3593,7 @@ Blautia	liquoris
 Blautia	luti
 Blautia	obeum
 Blautia	producta
+Blautia	pseudococcoides
 Blautia	schinkii
 Blautia	stercoris
 Blautia	wexlerae
@@ -3581,6 +3615,7 @@ Blennothrix	minor
 Blennothrix	mirifica
 Blennothrix	ravenelii
 Blennothrix	vermicularis
+Boanema	scoparia
 Bogoriella	caseilytica
 Bombella	apis
 Bombella	favorum
@@ -3588,8 +3623,10 @@ Bombella	intestini
 Bombella	mellum
 Bombilactobacillus	apium
 Bombilactobacillus	bombi
+Bombilactobacillus	folatiphilus
 Bombilactobacillus	mellifer
 Bombilactobacillus	mellis
+Bombilactobacillus	thymidiniphilus
 Bombiscardovia	coagulans
 Bordetella	avium
 Bordetella	bronchialis
@@ -3751,6 +3788,7 @@ Bradyrhizobium	arachidis
 Bradyrhizobium	archetypum
 Bradyrhizobium	australafricanum
 Bradyrhizobium	australiense
+Bradyrhizobium	barranii
 Bradyrhizobium	betae
 Bradyrhizobium	cajani
 Bradyrhizobium	canariense
@@ -3838,6 +3876,7 @@ Brenneria	quercina
 Brenneria	roseae
 Brenneria	rubrifaciens
 Brenneria	salicis
+Brenneria	tiliae
 Breoghania	corrubedonensis
 Brevibacillus	agri
 Brevibacillus	aydinogluensis
@@ -3846,6 +3885,7 @@ Brevibacillus	brevis
 Brevibacillus	centrosporus
 Brevibacillus	choshinensis
 Brevibacillus	composti
+Brevibacillus	dissolubilis
 Brevibacillus	fluminis
 Brevibacillus	formosus
 Brevibacillus	fortis
@@ -4519,6 +4559,7 @@ Catenuloplanes	japonicus
 Catenuloplanes	nepalensis
 Catenuloplanes	niger
 Catonella	morbi
+Caudiculophycus	rivularioides
 Caulifigura	coniformis
 Caulobacter	bacteroides
 Caulobacter	crescentus
@@ -4577,7 +4618,9 @@ Cellulomonas	chitinilytica
 Cellulomonas	citrea
 Cellulomonas	composti
 Cellulomonas	denverensis
+Cellulomonas	dongxiuzhuiae
 Cellulomonas	endophytica
+Cellulomonas	fengjieae
 Cellulomonas	fermentans
 Cellulomonas	fimi
 Cellulomonas	flavigena
@@ -4602,6 +4645,7 @@ Cellulomonas	telluris
 Cellulomonas	terrae
 Cellulomonas	turbata
 Cellulomonas	uda
+Cellulomonas	wangleii
 Cellulomonas	xylanilytica
 Cellulophaga	algicola
 Cellulophaga	baltica
@@ -4645,6 +4689,7 @@ Cereibacter	azotoformans
 Cereibacter	changlensis
 Cereibacter	johrii
 Cereibacter	ovatus
+Cereibacter	sediminicola
 Cereibacter	sphaeroides
 Cesiribacter	andamanensis
 Cesiribacter	roseus
@@ -4878,6 +4923,7 @@ Chromohalobacter	canadensis
 Chromohalobacter	israelensis
 Chromohalobacter	japonicus
 Chromohalobacter	marismortui
+Chromohalobacter	moromii
 Chromohalobacter	nigrandesensis
 Chromohalobacter	salarius
 Chromohalobacter	salexigens
@@ -4992,6 +5038,7 @@ Chryseobacterium	nepalense
 Chryseobacterium	oleae
 Chryseobacterium	oncorhynchi
 Chryseobacterium	oranimense
+Chryseobacterium	oryzae
 Chryseobacterium	pallidum
 Chryseobacterium	palustre
 Chryseobacterium	panacisoli
@@ -5022,6 +5069,7 @@ Chryseobacterium	soldanellicola
 Chryseobacterium	soli
 Chryseobacterium	solincola
 Chryseobacterium	subflavum
+Chryseobacterium	suipulveris
 Chryseobacterium	taeanense
 Chryseobacterium	taichungense
 Chryseobacterium	taihuense
@@ -5108,6 +5156,7 @@ Citroniella	saccharovorans
 Clastidium	nepalense
 Clastidium	setigerum
 Clathrocystis	aeruginosa
+Clavibacter	californiensis
 Clavibacter	capsici
 Clavibacter	capsici
 Clavibacter	insidiosus
@@ -5117,6 +5166,7 @@ Clavibacter	michiganense
 Clavibacter	michiganensis
 Clavibacter	nebraskensis
 Clavibacter	nebraskensis
+Clavibacter	phaseoli
 Clavibacter	rathayi
 Clavibacter	sepedonicus
 Clavibacter	sepedonicus
@@ -5426,10 +5476,12 @@ Cochleicola	gelatinilyticus
 Cochlodiniinecator	piscidefendens
 Cocleimonas	flava
 Coelocystis	kuetzingianum
+Coelomoron	microcystoides
 Coelomoron	minimus
 Coelomoron	pusillum
 Coelomoron	regulare
 Coelomoron	regularis
+Coelomoron	vestitum
 Coelosphaeriopsis	chlamydocystis
 Coelosphaeriopsis	halophila
 Coelosphaerium	chlamydocystis
@@ -5488,7 +5540,9 @@ Cohnella	thermotolerans
 Cohnella	xylanilytica
 Cohnella	yongneupensis
 Cohnella	zeiphila
+Coleodesmiopsis	fremyi
 Coleodesmium	wrangelii
+Coleodesmiumopsis	fremyi
 Coleofasciculus	chthonoplastes
 Coleonema	arenifera
 Coleospermum	goeppertianum
@@ -5609,6 +5663,7 @@ Conexibacter	arvalis
 Conexibacter	stalactiti
 Conexibacter	woesei
 Conexivisphaera	calida
+Conferva	ochracea
 Confluentibacter	citreus
 Confluentibacter	lentus
 Confluentibacter	sediminis
@@ -5765,6 +5820,7 @@ Corynebacterium	occultum
 Corynebacterium	oculi
 Corynebacterium	oortii
 Corynebacterium	otitidis
+Corynebacterium	parakroppenstedtii
 Corynebacterium	paurometabolum
 Corynebacterium	pelargi
 Corynebacterium	phocae
@@ -5774,6 +5830,7 @@ Corynebacterium	poinsettiae
 Corynebacterium	pollutisoli
 Corynebacterium	propinquum
 Corynebacterium	pseudodiphtheriticum
+Corynebacterium	pseudokroppenstedtii
 Corynebacterium	pseudopelargi
 Corynebacterium	pseudotuberculosis
 Corynebacterium	pyogenes
@@ -5825,6 +5882,8 @@ Corynebacterium	wankanglinii
 Corynebacterium	xerosis
 Corynebacterium	yudongzhengii
 Corynebacterium	zhongnanshanii
+Corynephora	marina
+Corynephora	umbellata
 Cosenzaea	myxofaciens
 Costertonia	aggregata
 Couchioplanes	caeruleus
@@ -5993,6 +6052,7 @@ Cutibacterium	porci
 Cyanarcus	hamiformis
 Cyanoaggregatum	brasiliense
 Cyanoarbor	rupestre
+Cyanobacterium	stanieri
 Cyanobium	amethystinum
 Cyanobium	bacillare
 Cyanobium	diatomicola
@@ -6094,11 +6154,14 @@ Cylindrospermopsis	sinuosa
 Cylindrospermopsis	taverae
 Cylindrospermum	alatosporum
 Cylindrospermum	badium
+Cylindrospermum	bourrellyi
+Cylindrospermum	desikacharyi
 Cylindrospermum	licheniforme
 Cylindrospermum	majus
 Cylindrospermum	muscicola
 Cylindrospermum	planctonicum
 Cylindrospermum	stagnale
+Cylindrospermum	zonatum
 Cymatolege	isodiametrica
 Cymatolege	spiroidea
 Cypionkella	aquatica
@@ -6155,6 +6218,7 @@ Cytophaga	salmonicolor
 Cytophaga	succinicans
 Cytophaga	uliginosa
 Cytophaga	xylanolytica
+Dactylococcopsis	elenkinii
 Dactylococcopsis	scenedesmoides
 Dactylosporangium	aurantiacum
 Dactylosporangium	cerinum
@@ -6194,6 +6258,7 @@ Dechloromonas	suillum
 Dechlorosoma	suillum
 Deefgea	chitinilytica
 Deefgea	rivuli
+Deefgea	salmonis
 Deferribacter	abyssi
 Deferribacter	autotrophicus
 Deferribacter	desulfuricans
@@ -6237,8 +6302,10 @@ Deinococcus	aquaedulcis
 Deinococcus	aquaticus
 Deinococcus	aquatilis
 Deinococcus	aquiradiocola
+Deinococcus	arboris
 Deinococcus	arcticus
 Deinococcus	arenae
+Deinococcus	betulae
 Deinococcus	budaensis
 Deinococcus	caeni
 Deinococcus	carri
@@ -6390,6 +6457,7 @@ Dermocarpella	incrassata
 Dermocarpella	pedicellata
 Dermocarpella	prasina
 Dermocarpella	sphagnicola
+Dermogloea	limi
 Derxia	gummosa
 Derxia	lacustris
 Desemzia	incerta
@@ -6405,6 +6473,7 @@ Desertifilum	tharense
 Desertihabitans	aurantiacus
 Desertihabitans	brevis
 Desertimonas	flava
+Desikacharya	kailashaharensis
 Desikacharya	nostocoides
 Desikacharya	soli
 Desikacharya	thermotolerans
@@ -7402,6 +7471,7 @@ Entomoplasma	melaleucae
 Entomoplasma	somnilux
 Entophysalis	granulosa
 Eoetvoesia	caeni
+Eohyella	campbellii
 Eperythrozoon	coccoides
 Eperythrozoon	ovis
 Eperythrozoon	parvum
@@ -7731,6 +7801,7 @@ Ferrovibrio	denitrificans
 Ferrovibrio	soli
 Ferrovibrio	terrae
 Ferrovibrio	xuzhouensis
+Ferruginibacter	albus
 Ferruginibacter	alkalilentus
 Ferruginibacter	lapsinanis
 Ferruginibacter	paludis
@@ -8332,6 +8403,7 @@ Fructilactobacillus	lindneri
 Fructilactobacillus	sanfranciscensis
 Fructilactobacillus	vespulae
 Fructobacillus	broussonetiae
+Fructobacillus	cardui
 Fructobacillus	durionis
 Fructobacillus	ficulneus
 Fructobacillus	fructosus
@@ -8363,6 +8435,7 @@ Fundibacter	jadensis
 Fundicoccus	fermenti
 Fundicoccus	ignavus
 Fundidesulfovibrio	butyratiphilus
+Fundidesulfovibrio	magnetotacticus
 Fundidesulfovibrio	putealis
 Furfurilactobacillus	curtus
 Furfurilactobacillus	milii
@@ -8741,6 +8814,7 @@ Gloeocapsopsis	dvorakii
 Gloeocapsopsis	ferruginea
 Gloeocapsopsis	magma
 Gloeocapsopsis	pleurocapsoides
+Gloeochaete	wittrockiana
 Gloeochlamys	simmerii
 Gloeomargarita	lithophora
 Gloeothece	abiscoensis
@@ -8844,6 +8918,7 @@ Glycomyces	paridis
 Glycomyces	phytohabitans
 Glycomyces	rhizosphaerae
 Glycomyces	rutgersensis
+Glycomyces	salinus
 Glycomyces	sambucus
 Glycomyces	scopariae
 Glycomyces	sediminimaris
@@ -8899,6 +8974,7 @@ Gordonia	jinghuaiqii
 Gordonia	jinhuaensis
 Gordonia	kroppenstedtii
 Gordonia	lacunae
+Gordonia	liuliyuniae
 Gordonia	malaquae
 Gordonia	mangrovi
 Gordonia	namibiensis
@@ -8910,6 +8986,7 @@ Gordonia	paraffinivorans
 Gordonia	phosphorivorans
 Gordonia	phthalatica
 Gordonia	polyisoprenivorans
+Gordonia	pseudamarae
 Gordonia	rhizosphera
 Gordonia	rubripertincta
 Gordonia	rubropertinctus
@@ -8923,6 +9000,7 @@ Gordonia	sputi
 Gordonia	terrae
 Gordonia	westfalica
 Gordonia	zhaorongruii
+Gordonia	zhenghanii
 Gordonibacter	faecihominis
 Gordonibacter	pamelaeae
 Gordonibacter	urolithinfaciens
@@ -8994,6 +9072,7 @@ Granulicella	sapmiensis
 Granulicella	sibirica
 Granulicella	tundricola
 Granulicoccus	phenolivorans
+Granulimonas	faecalis
 Granulosicoccus	antarcticus
 Granulosicoccus	coccoides
 Granulosicoccus	marinus
@@ -9069,9 +9148,11 @@ Hahella	chejuensis
 Hahella	ganghwensis
 Hahyoungchilella	caricis
 Haladaptatus	cibarius
+Haladaptatus	halobius
 Haladaptatus	litoreus
 Haladaptatus	pallidirubidus
 Haladaptatus	paucihalophilus
+Haladaptatus	salinisoli
 Halalkaliarchaeum	desulfuricum
 Halalkalibacillus	halophilus
 Halalkalibacillus	sediminis
@@ -9088,10 +9169,12 @@ Halalkalibacter	wakoensis
 Halalkalibacterium	halodurans
 Halalkalibacterium	ligniniphilum
 Halalkalibacterium	roseum
+Halalkalibaculum	roseum
 Halalkalicoccus	jeotgali
 Halalkalicoccus	paucihalophilus
 Halalkalicoccus	subterraneus
 Halalkalicoccus	tibetensis
+Halalkalirubrum	salinum
 Halanaeroarchaeum	sulfurireducens
 Halanaerobacter	chitinivorans
 Halanaerobacter	chitinovorans
@@ -9288,6 +9371,7 @@ Halodurantibacterium	flavum
 Haloechinothrix	alba
 Haloechinothrix	halophila
 Haloechinothrix	salitolerans
+Haloferax	alexandrinum
 Haloferax	alexandrinus
 Haloferax	chudinovii
 Haloferax	denitrificans
@@ -9521,8 +9605,11 @@ Haloplanus	vescus
 Haloplasma	contractile
 Halopolyspora	alba
 Halopolyspora	algeriensis
+Haloprofundus	halobius
 Haloprofundus	halophilus
 Haloprofundus	marisrubri
+Haloprofundus	salilacus
+Haloprofundus	salinisoli
 Halopseudomonas	aestusnigri
 Halopseudomonas	bauzanensis
 Halopseudomonas	formosensis
@@ -9624,6 +9711,9 @@ Halosimplex	litoreum
 Halosimplex	pelagicum
 Halosimplex	rubrum
 Halosimplex	salinum
+Halosolutus	amylolyticus
+Halosolutus	gelatinilyticus
+Halosolutus	halophilus
 Halospina	denitrificans
 Halospirulina	tapeticola
 Halostagnicola	alkaliphila
@@ -9796,6 +9886,7 @@ Henriciella	marina
 Henriciella	mobilis
 Henriciella	pelagia
 Hephaestia	caeni
+Hephaestia	mangrovi
 Herbaspirillum	aquaticum
 Herbaspirillum	aurantiacum
 Herbaspirillum	autotrophicum
@@ -10223,6 +10314,8 @@ Ialomitzia	cavernicola
 Iamia	majanohamensis
 Ichthyenterobacterium	magnum
 Ichthyobacterium	seriolicida
+Ideonella	alba
+Ideonella	aquatica
 Ideonella	azotifigens
 Ideonella	dechloratans
 Ideonella	livida
@@ -10453,6 +10546,7 @@ Jiangella	rhizosphaerae
 Jiangella	ureilytica
 Jiella	aquimaris
 Jiella	endophytica
+Jiella	flava
 Jiella	mangrovi
 Jiella	pacifica
 Jiella	sonneratiae
@@ -11413,6 +11507,7 @@ Legionella	anisa
 Legionella	antarctica
 Legionella	beliardensis
 Legionella	birminghamensis
+Legionella	bononiensis
 Legionella	bozemanae
 Legionella	bozemanii
 Legionella	brunensis
@@ -11519,7 +11614,7 @@ Lelliottia	jeotgali
 Lelliottia	nimipressuralis
 Leminorella	grimontii
 Leminorella	richardii
-Lemmermannia	palida
+Lemmermannia	pallida
 Lemmermanniella	pallida
 Lentibacillus	amyloliquefaciens
 Lentibacillus	cibarius
@@ -11597,6 +11692,7 @@ Leptochaete	crustacea
 Leptochromothrix	engenei
 Leptochromothrix	valpauliae
 Leptoelongatus	litoralis
+Leptogranulimonas	caecicola
 Leptolinea	tardivitalis
 Leptolyngbya	aeruginea
 Leptolyngbya	africana
@@ -11802,6 +11898,7 @@ Leptospira	perolatii
 Leptospira	putramalaysiae
 Leptospira	ryugenii
 Leptospira	saintgironsiae
+Leptospira	sanjuanensis
 Leptospira	santarosai
 Leptospira	sarikeiensis
 Leptospira	selangorensis
@@ -11965,6 +12062,7 @@ Ligilactobacillus	equi
 Ligilactobacillus	faecis
 Ligilactobacillus	hayakitensis
 Ligilactobacillus	murinus
+Ligilactobacillus	pabuli
 Ligilactobacillus	pobuzihii
 Ligilactobacillus	ruminis
 Ligilactobacillus	saerimneri
@@ -11975,6 +12073,7 @@ Lihuaxuella	thermophila
 Limibacillus	halophilus
 Limibacter	armeniacum
 Limibaculum	halophilum
+Limibaculum	sediminis
 Limihaloglobus	sulfuriphilus
 Limimaricola	aestuariicola
 Limimaricola	cinnabarinus
@@ -11983,6 +12082,7 @@ Limimaricola	pyoseonensis
 Limimaricola	soesokkakensis
 Limimaricola	variabilis
 Limimonas	halophila
+Limisalsivibrio	acetivorans
 Limisphaera	ngatamarikiensis
 Limnanthe	linnaei
 Limnobacter	alexandrii
@@ -12194,6 +12294,7 @@ Luedemannella	flava
 Luedemannella	helvata
 Lujinxingia	litoralis
 Lujinxingia	sediminis
+Lujinxingia	vulgaris
 Luminiphilus	syltensis
 Lunatibacter	salilacus
 Lunatimonas	lonarensis
@@ -12234,6 +12335,7 @@ Luteimonas	terrae
 Luteimonas	terricola
 Luteimonas	tolerans
 Luteimonas	vadosa
+Luteimonas	wenzhouensis
 Luteimonas	yindakuii
 Luteipulveratus	halotolerans
 Luteipulveratus	mongoliensis
@@ -12253,6 +12355,7 @@ Luteolibacter	flavescens
 Luteolibacter	gellanilyticus
 Luteolibacter	luojiensis
 Luteolibacter	luteus
+Luteolibacter	marinus
 Luteolibacter	pohnpeiensis
 Luteolibacter	yonseiensis
 Luteovulum	alkalitolerans
@@ -12317,6 +12420,7 @@ Lyngbya	endophytica
 Lyngbya	epiphytica
 Lyngbya	erebi
 Lyngbya	erecta
+Lyngbya	fallax
 Lyngbya	fontana
 Lyngbya	fritschii
 Lyngbya	gardneri
@@ -12341,6 +12445,7 @@ Lyngbya	lutea
 Lyngbya	lutescens
 Lyngbya	majuscula
 Lyngbya	margaretheana
+Lyngbya	margaritata
 Lyngbya	martensiana
 Lyngbya	membraniporae
 Lyngbya	mesotricha
@@ -12359,6 +12464,7 @@ Lyngbya	pithophorae
 Lyngbya	polysiphoniae
 Lyngbya	porphyrosiphonis
 Lyngbya	protospira
+Lyngbya	pseudospirulina
 Lyngbya	purpurascens
 Lyngbya	purpurea
 Lyngbya	rimosa
@@ -12435,12 +12541,14 @@ Lysobacter	alkalisoli
 Lysobacter	antarcticus
 Lysobacter	antibioticus
 Lysobacter	arseniciresistens
+Lysobacter	avium
 Lysobacter	brunescens
 Lysobacter	bugurensis
 Lysobacter	caeni
 Lysobacter	capsici
 Lysobacter	caseinilyticus
 Lysobacter	cavernae
+Lysobacter	ciconiae
 Lysobacter	concretionis
 Lysobacter	daejeonensis
 Lysobacter	defluvii
@@ -12481,6 +12589,7 @@ Lysobacter	rhizosphaerae
 Lysobacter	ruishenii
 Lysobacter	sediminicola
 Lysobacter	segetis
+Lysobacter	selenitireducens
 Lysobacter	silvestris
 Lysobacter	silvisoli
 Lysobacter	solanacearum
@@ -12570,6 +12679,7 @@ Mammaliicoccus	lentus
 Mammaliicoccus	sciuri
 Mammaliicoccus	stepanovicii
 Mammaliicoccus	vitulinus
+Mangrovactinospora	gilvigrisea
 Mangrovibacter	phragmitis
 Mangrovibacter	plantisponsor
 Mangrovibacter	yixingensis
@@ -12694,6 +12804,7 @@ Mariniflexile	soesokkakense
 Marinilabilia	agarovorans
 Marinilabilia	rubra
 Marinilabilia	salmonicolor
+Marinilactibacillus	kalidii
 Marinilactibacillus	piezotolerans
 Marinilactibacillus	psychrotolerans
 Mariniluteicoccus	endophyticus
@@ -13043,6 +13154,7 @@ Melittangium	alboraceum
 Melittangium	boletus
 Melittangium	lichenicola
 Membranicola	marinus
+Membranihabitans	marinus
 Meniscus	glaucopis
 Merdimonas	faecis
 Meridianimaribacter	flavus
@@ -13188,6 +13300,7 @@ Metabacillus	bambusae
 Metabacillus	crassostreae
 Metabacillus	endolithicus
 Metabacillus	fastidiosus
+Metabacillus	flavus
 Metabacillus	galliciensis
 Metabacillus	halosaccharovorans
 Metabacillus	herbersteinensis
@@ -13206,6 +13319,7 @@ Metakosakonia	massiliensis
 Metallibacterium	scheffleri
 Metallosphaera	cuprina
 Metallosphaera	hakonensis
+Metallosphaera	javensis
 Metallosphaera	prunae
 Metallosphaera	sedula
 Metallosphaera	tengchongensis
@@ -13235,6 +13349,7 @@ Methanimicrococcus	blatticola
 Methanobacterium	aarhusense
 Methanobacterium	aggregans
 Methanobacterium	alcaliphilum
+Methanobacterium	alkalithermotolerans
 Methanobacterium	arbophilicum
 Methanobacterium	arcticum
 Methanobacterium	beijingense
@@ -13972,6 +14087,7 @@ Microellobosporia	grisea
 Microellobosporia	violacea
 Microhaloa	botryoides
 Microhaloa	protogenita
+Microhaloa	rupestris
 Microlunatus	aerolatus
 Microlunatus	antarcticus
 Microlunatus	aurantiacus
@@ -13996,6 +14112,7 @@ Microlunatus	spumicolus
 Micromonas	micros
 Micromonospora	acroterricola
 Micromonospora	andamanensis
+Micromonospora	antibiotica
 Micromonospora	arida
 Micromonospora	aurantiaca
 Micromonospora	aurantionigra
@@ -14041,6 +14158,7 @@ Micromonospora	halotolerans
 Micromonospora	harpali
 Micromonospora	humi
 Micromonospora	humida
+Micromonospora	humidisoli
 Micromonospora	inaquosa
 Micromonospora	inositola
 Micromonospora	inyonensis
@@ -14062,6 +14180,7 @@ Micromonospora	narathiwatensis
 Micromonospora	nickelidurans
 Micromonospora	nigra
 Micromonospora	noduli
+Micromonospora	okii
 Micromonospora	olivasterospora
 Micromonospora	orduensis
 Micromonospora	oryzae
@@ -14260,6 +14379,7 @@ Moraxella	cuniculi
 Moraxella	equi
 Moraxella	lacunata
 Moraxella	lincolnii
+Moraxella	nasovis
 Moraxella	nonliquefaciens
 Moraxella	oblonga
 Moraxella	osloensis
@@ -14351,6 +14471,8 @@ Mucilaginibacter	polytrichastri
 Mucilaginibacter	psychrotolerans
 Mucilaginibacter	puniceus
 Mucilaginibacter	rigui
+Mucilaginibacter	rivuli
+Mucilaginibacter	robiniae
 Mucilaginibacter	roseus
 Mucilaginibacter	rubeus
 Mucilaginibacter	sabulilitoris
@@ -14683,6 +14805,7 @@ Mycolicibacterium	arabiense
 Mycolicibacterium	arcueilense
 Mycolicibacterium	aromaticivorans
 Mycolicibacterium	aubagnense
+Mycolicibacterium	aurantiacum
 Mycolicibacterium	aurum
 Mycolicibacterium	austroafricanum
 Mycolicibacterium	bacteremicum
@@ -14765,6 +14888,7 @@ Mycolicibacterium	vaccae
 Mycolicibacterium	vanbaalenii
 Mycolicibacterium	vulneris
 Mycolicibacterium	wolinskyi
+Mycolicibacterium	xanthum
 Mycoplana	azooxidifex
 Mycoplana	bullata
 Mycoplana	dimorpha
@@ -15052,6 +15176,7 @@ Natrialba	taiwanensis
 Natribacillus	halophilus
 Natribaculum	breve
 Natribaculum	longum
+Natribaculum	luteum
 Natrinema	altunense
 Natrinema	amylolyticum
 Natrinema	ejinorense
@@ -15228,6 +15353,7 @@ Neorhizobium	huautlense
 Neorhizobium	petrolearium
 Neorhizobium	tomejilense
 Neorhizobium	vignae
+Neorhizobium	xiangyangii
 Neorickettsia	findlayensis
 Neorickettsia	helminthoeca
 Neoroseomonas	alkaliterrae
@@ -15239,6 +15365,7 @@ Neoroseomonas	soli
 Neoroseomonas	terrae
 Neoscardovia	arbecensis
 Neosynechococcus	sphagnicola
+Neotabrizicola	shimadae
 Neowestiellopsis	bilateralis
 Neowestiellopsis	persica
 Neowollea	manoromense
@@ -15295,6 +15422,7 @@ Nevskia	ramosa
 Nevskia	soli
 Nevskia	terrae
 Nguyenibacter	vanlangensis
+Niabella	agricola
 Niabella	aquatica
 Niabella	aurantiaca
 Niabella	beijingensis
@@ -15325,6 +15453,7 @@ Nibrella	viscosa
 Nibribacter	koreensis
 Nibricoccus	aquaticus
 Nicoletella	semolina
+Nicolia	spurrieriana
 Ningiella	ruwaisensis
 Nioella	aestuarii
 Nioella	nitratireducens
@@ -15559,6 +15688,7 @@ Nocardioides	baekrokdamisoli
 Nocardioides	basaltis
 Nocardioides	bigeumensis
 Nocardioides	caeni
+Nocardioides	campestrisoli
 Nocardioides	caricicola
 Nocardioides	cavernae
 Nocardioides	cavernaquae
@@ -15639,6 +15769,7 @@ Nocardioides	montaniterrae
 Nocardioides	nanhaiensis
 Nocardioides	nematodiphilus
 Nocardioides	nitrophenolicus
+Nocardioides	ochotonae
 Nocardioides	oleivorans
 Nocardioides	opuntiae
 Nocardioides	pacificus
@@ -15647,6 +15778,7 @@ Nocardioides	panacihumi
 Nocardioides	panacis
 Nocardioides	panacisoli
 Nocardioides	panaciterrulae
+Nocardioides	pantholopis
 Nocardioides	panzhihuaensis
 Nocardioides	panzhihuensis
 Nocardioides	pelophilus
@@ -16088,6 +16220,7 @@ Oceanobacillus	soja
 Oceanobacillus	sojae
 Oceanobacillus	zhaokaii
 Oceanobacter	kriegii
+Oceanobacter	mangrovi
 Oceanococcus	atlanticus
 Oceanomonas	baumannii
 Oceanomonas	doudoroffii
@@ -16206,6 +16339,7 @@ Oncobyrsa	sarcinoides
 Onkonema	compactum
 Onodrimia	javanensis
 Ophiophycus	aerugineus
+Ophiothrix	epibryos
 Ophiothrix	epidendron
 Ophiothrix	hansgirgii
 Opitutus	terrae
@@ -16267,7 +16401,6 @@ Oryzomonas	japonicum
 Oryzomonas	ruber
 Oryzomonas	rubra
 Oryzomonas	sagensis
-Oscillaria	spongeliae
 Oscillatoria	acuiformis
 Oscillatoria	acula
 Oscillatoria	acuminata
@@ -16410,6 +16543,7 @@ Oscillatoria	willei
 Oscillatoria	woronichinii
 Oscillatoria	yuhuensis
 Oscillatoria	zahidii
+Oscillatoriopsis	obtusa
 Oscillibacter	acetigenes
 Oscillibacter	hominis
 Oscillibacter	ruminantium
@@ -16674,6 +16808,7 @@ Paenibacillus	rigui
 Paenibacillus	riograndensis
 Paenibacillus	ripae
 Paenibacillus	sabinae
+Paenibacillus	sabuli
 Paenibacillus	sacheonensis
 Paenibacillus	salinicaeni
 Paenibacillus	sanguinis
@@ -16730,6 +16865,7 @@ Paenibacillus	typhae
 Paenibacillus	uliginis
 Paenibacillus	urinalis
 Paenibacillus	validus
+Paenibacillus	vietnamensis
 Paenibacillus	vini
 Paenibacillus	vulneris
 Paenibacillus	wenxiniae
@@ -16992,6 +17128,7 @@ Paracapsa	siderophila
 Parachlamydia	acanthamoebae
 Paracholeplasma	morum
 Paracholeplasma	vituli
+Parachryseolinea	silvisoli
 Paracidobacterium	acidisoli
 Paraclostridium	benzoelyticum
 Paraclostridium	bifermentans
@@ -17019,6 +17156,7 @@ Paracoccus	communis
 Paracoccus	contaminans
 Paracoccus	denitrificans
 Paracoccus	endophyticus
+Paracoccus	everestensis
 Paracoccus	fistulariae
 Paracoccus	fontiphilus
 Paracoccus	haematequi
@@ -17219,6 +17357,7 @@ Paroceanicella	profunda
 Parolsenella	catena
 Parolsenella	massiliensis
 Parthasarathiella	prolifica
+Partitiofilum	gongyloides
 Parvibacter	caecicola
 Parvibaculum	hydrocarboniclasticum
 Parvibaculum	indicum
@@ -17319,6 +17458,7 @@ Pectobacterium	quasiaquaticum
 Pectobacterium	rhapontici
 Pectobacterium	versatile
 Pectobacterium	wasabiae
+Pediochloris	parallela
 Pediococcus	acidilactici
 Pediococcus	argentinicus
 Pediococcus	cellicola
@@ -17425,6 +17565,7 @@ Pedobacter	ruber
 Pedobacter	saltans
 Pedobacter	sandarakinus
 Pedobacter	schmidteae
+Pedobacter	segetis
 Pedobacter	seoulensis
 Pedobacter	silvilitoris
 Pedobacter	soli
@@ -17639,6 +17780,8 @@ Persicobacter	psychrovividus
 Persinema	komarekii
 Perspicuibacter	marinus
 Petalonema	alatum
+Peterkaempfera	bronchialis
+Peterkaempfera	griseoplana
 Peteryoungia	aggregata
 Peteryoungia	ipomoeae
 Petrachloros	mirabilis
@@ -17655,6 +17798,7 @@ Petrotoga	mobilis
 Petrotoga	olearia
 Petrotoga	sibirica
 Pfennigia	purpurea
+Phaeacidiphilus	oryzae
 Phaeobacter	aquaemixtae
 Phaeobacter	arcticus
 Phaeobacter	caeruleus
@@ -17965,6 +18109,7 @@ Photobacterium	swingsii
 Photobacterium	toruni
 Photorhabdus	aegyptia
 Photorhabdus	akhurstii
+Photorhabdus	antumapuensis
 Photorhabdus	asymbiotica
 Photorhabdus	australis
 Photorhabdus	bodei
@@ -18007,6 +18152,7 @@ Phycisphaera	mikurensis
 Phycocomes	zhengii
 Phyllobacterium	bourgognense
 Phyllobacterium	brassicacearum
+Phyllobacterium	calauticae
 Phyllobacterium	catacumbae
 Phyllobacterium	endophyticum
 Phyllobacterium	ifriqiyense
@@ -18273,13 +18419,16 @@ Pleurocapsa	fuliginosa
 Pleurocapsa	gloeocapsoides
 Pleurocapsa	hansgirgiana
 Pleurocapsa	mucosa
+Pleurocapsa	rivularis
 Pluralibacter	gergoviae
 Pluralibacter	pyrinus
 Podocapsa	pedicellatum
 Pokkaliibacter	plantistimulans
 Polaribacter	aquimarinus
 Polaribacter	atrinae
+Polaribacter	batillariae
 Polaribacter	butkevichii
+Polaribacter	cellanae
 Polaribacter	dokdonensis
 Polaribacter	filamentus
 Polaribacter	franzmannii
@@ -18295,6 +18444,7 @@ Polaribacter	litorisediminis
 Polaribacter	marinaquae
 Polaribacter	marinivivus
 Polaribacter	pacificus
+Polaribacter	pectinis
 Polaribacter	porphyrae
 Polaribacter	reichenbachii
 Polaribacter	sejongensis
@@ -18337,6 +18487,7 @@ Polygonibacillus	indicireducens
 Polymorphobacter	arshaanensis
 Polymorphobacter	fuscus
 Polymorphobacter	glacialis
+Polymorphobacter	megasporae
 Polymorphobacter	multimanifer
 Polymorphospora	rubra
 Polynucleobacter	acidiphobus
@@ -18524,6 +18675,11 @@ Prauserella	salsuginis
 Prauserella	sediminis
 Prauserella	shujinwangii
 Prauserella	soli
+Prescottella	agglutinans
+Prescottella	defluvii
+Prescottella	equi
+Prescottella	soli
+Prescottella	subtropica
 Prevotella	albensis
 Prevotella	amnii
 Prevotella	aurantiaca
@@ -18739,6 +18895,7 @@ Pseudalkalibacillus	berkeleyi
 Pseudalkalibacillus	caeni
 Pseudalkalibacillus	decolorationis
 Pseudalkalibacillus	hwajinpoensis
+Pseudalkalibacillus	salsuginis
 Pseudaminobacter	arsenicus
 Pseudaminobacter	defluvii
 Pseudaminobacter	granuli
@@ -18903,6 +19060,7 @@ Pseudochrobactrum	kiredjianiae
 Pseudochrobactrum	lubricantis
 Pseudochrobactrum	saccharolyticum
 Pseudochroococcus	coutei
+Pseudochryseolinea	flava
 Pseudocitrobacter	anthropi
 Pseudocitrobacter	corydidari
 Pseudocitrobacter	faecalis
@@ -18959,6 +19117,8 @@ Pseudofulvibacter	geojedonensis
 Pseudofulvibacter	marinus
 Pseudofulvimonas	gallinarii
 Pseudogemmobacter	bohemicus
+Pseudogemmobacter	hezensis
+Pseudogemmobacter	humi
 Pseudoglutamicibacter	albus
 Pseudoglutamicibacter	cumminsii
 Pseudogracilibacillus	auburnensis
@@ -19037,6 +19197,7 @@ Pseudomonas	azotoformans
 Pseudomonas	baetica
 Pseudomonas	balearica
 Pseudomonas	baltica
+Pseudomonas	bananamidigenes
 Pseudomonas	bauzanensis
 Pseudomonas	beijerinckii
 Pseudomonas	benzenivorans
@@ -19047,6 +19208,7 @@ Pseudomonas	boanensis
 Pseudomonas	bohemica
 Pseudomonas	borbori
 Pseudomonas	boreopolis
+Pseudomonas	botevensis
 Pseudomonas	brassicacearum
 Pseudomonas	brassicae
 Pseudomonas	brenneri
@@ -19111,6 +19273,7 @@ Pseudomonas	farris
 Pseudomonas	farsensis
 Pseudomonas	ficuserectae
 Pseudomonas	fildesensis
+Pseudomonas	fitomaticsae
 Pseudomonas	flava
 Pseudomonas	flavescens
 Pseudomonas	flectens
@@ -19118,6 +19281,7 @@ Pseudomonas	flexibilis
 Pseudomonas	floridensis
 Pseudomonas	fluorescens
 Pseudomonas	fluvialis
+Pseudomonas	folii
 Pseudomonas	formosensis
 Pseudomonas	fragi
 Pseudomonas	frederiksbergensis
@@ -19194,6 +19358,7 @@ Pseudomonas	laurylsulfatovorans
 Pseudomonas	lemoignei
 Pseudomonas	leptonychotis
 Pseudomonas	libanensis
+Pseudomonas	lijiangensis
 Pseudomonas	lini
 Pseudomonas	linyingensis
 Pseudomonas	litoralis
@@ -19243,6 +19408,7 @@ Pseudomonas	oceani
 Pseudomonas	ogarae
 Pseudomonas	oleovorans
 Pseudomonas	orientalis
+Pseudomonas	oryzagri
 Pseudomonas	oryzicola
 Pseudomonas	oryzihabitans
 Pseudomonas	otitidis
@@ -19321,6 +19487,7 @@ Pseudomonas	segetis
 Pseudomonas	seleniipraecipitans
 Pseudomonas	seleniipraecipitatus
 Pseudomonas	sesami
+Pseudomonas	sessilinigenes
 Pseudomonas	shahriarae
 Pseudomonas	shirazensis
 Pseudomonas	shirazica
@@ -19357,6 +19524,7 @@ Pseudomonas	toyotomiensis
 Pseudomonas	tremae
 Pseudomonas	tritici
 Pseudomonas	triticicola
+Pseudomonas	triticifolii
 Pseudomonas	trivialis
 Pseudomonas	tructae
 Pseudomonas	tuomuerensis
@@ -19374,8 +19542,10 @@ Pseudomonas	versuta
 Pseudomonas	vesicularis
 Pseudomonas	viciae
 Pseudomonas	viridiflava
+Pseudomonas	vlassakiae
 Pseudomonas	vranovensis
 Pseudomonas	wadenswilerensis
+Pseudomonas	wayambapalatensis
 Pseudomonas	weihenstephanensis
 Pseudomonas	woodsii
 Pseudomonas	xantholysinigenes
@@ -19587,6 +19757,9 @@ Pseudospirulina	amoena
 Pseudosporangium	ferrugineum
 Pseudostreptobacillus	hongkongensis
 Pseudosulfitobacter	pseudonitzschiae
+Pseudotabrizicola	algicola
+Pseudotabrizicola	alkalilacus
+Pseudotabrizicola	sediminis
 Pseudotenacibaculum	haliotis
 Pseudoteredinibacter	isoporae
 Pseudothauera	hydrothermalis
@@ -19689,10 +19862,13 @@ Psychrobacter	vallis
 Psychrobium	conchae
 Psychroflexus	aestuariivivens
 Psychroflexus	aurantiacus
+Psychroflexus	curvus
 Psychroflexus	gondwanense
 Psychroflexus	gondwanensis
 Psychroflexus	halocasei
+Psychroflexus	longus
 Psychroflexus	maritimus
+Psychroflexus	montanilacus
 Psychroflexus	planctonicus
 Psychroflexus	salarius
 Psychroflexus	salinarum
@@ -19805,6 +19981,7 @@ Qipengyuania	gaetbuli
 Qipengyuania	marisflavi
 Qipengyuania	nanhaisediminis
 Qipengyuania	oceanensis
+Qipengyuania	pacifica
 Qipengyuania	pelagi
 Qipengyuania	sediminis
 Qipengyuania	seohaensis
@@ -19968,6 +20145,7 @@ Rheinheimera	muenzenbergensis
 Rheinheimera	nanhaiensis
 Rheinheimera	pacifica
 Rheinheimera	perlucida
+Rheinheimera	pleomorphica
 Rheinheimera	riviphila
 Rheinheimera	salexigens
 Rheinheimera	sediminis
@@ -20006,6 +20184,7 @@ Rhizobium	cellulosilyticum
 Rhizobium	changzhiense
 Rhizobium	chutanense
 Rhizobium	ciceri
+Rhizobium	cremeum
 Rhizobium	daejeonense
 Rhizobium	dioscoreae
 Rhizobium	ecuadorense
@@ -20255,6 +20434,7 @@ Rhodococcus	yananensis
 Rhodococcus	yunnanensis
 Rhodococcus	zopfii
 Rhodocyclus	gelatinosus
+Rhodocyclus	gracilis
 Rhodocyclus	purpureus
 Rhodocyclus	tenuis
 Rhodocytophaga	aerolata
@@ -20473,7 +20653,10 @@ Romeria	leopoliensis
 Romeria	obtuseacuminata
 Romeria	victoriae
 Romeria	westii
+Romeriopsis	marina
+Romeriopsis	navalis
 Rosaria	clandestina
+Rosaria	ramosa
 Roseateles	aquatilis
 Roseateles	depolymerans
 Roseateles	terrae
@@ -20628,6 +20811,7 @@ Roseovarius	arcticus
 Roseovarius	atlanticus
 Roseovarius	azorensis
 Roseovarius	bejariae
+Roseovarius	carneus
 Roseovarius	confluentis
 Roseovarius	crassostreae
 Roseovarius	faecimaris
@@ -20891,6 +21075,7 @@ Saccharopolyspora	rectivirgula
 Saccharopolyspora	rhizosphaerae
 Saccharopolyspora	rosea
 Saccharopolyspora	shandongensis
+Saccharopolyspora	soli
 Saccharopolyspora	spinosa
 Saccharopolyspora	spinosporotrichia
 Saccharopolyspora	spongiae
@@ -20922,6 +21107,7 @@ Saccharothrix	hoggarensis
 Saccharothrix	isguenensis
 Saccharothrix	longispora
 Saccharothrix	lopnurensis
+Saccharothrix	luteola
 Saccharothrix	mutabilis
 Saccharothrix	obliqua
 Saccharothrix	saharensis
@@ -21446,6 +21632,7 @@ Shewanella	intestini
 Shewanella	inventionis
 Shewanella	irciniae
 Shewanella	japonica
+Shewanella	jiangmenensis
 Shewanella	kaireitica
 Shewanella	khirikhana
 Shewanella	litoralis
@@ -21640,6 +21827,7 @@ Sinosporangium	siamense
 Siphonobacter	aquaeclarae
 Siphonobacter	curvatus
 Siphononema	polonicum
+Siphonophycus	kestron
 Siphonosphaera	pannonica
 Sirenicapillaria	glauca
 Sirenicapillaria	rigida
@@ -21778,6 +21966,7 @@ Sphaerochaeta	halotolerans
 Sphaerochaeta	multiformis
 Sphaerochaeta	pleomorpha
 Sphaerodictyon	reticulatum
+Sphaerophycus	parvum
 Sphaerospermopsis	aphanizomenoides
 Sphaerospermopsis	eucompacta
 Sphaerospermopsis	kisseleviana
@@ -21955,7 +22144,9 @@ Sphingomonas	asaccharolytica
 Sphingomonas	astaxanthinifaciens
 Sphingomonas	aurantiaca
 Sphingomonas	azotifigens
+Sphingomonas	baiyangensis
 Sphingomonas	canadensis
+Sphingomonas	cannabina
 Sphingomonas	capsulata
 Sphingomonas	carotinifaciens
 Sphingomonas	carri
@@ -22314,6 +22505,7 @@ Spongiibacter	borealis
 Spongiibacter	marinus
 Spongiibacter	pelagi
 Spongiibacter	taiwanensis
+Spongiibacter	thalassae
 Spongiibacter	tropicus
 Spongiibacterium	flavum
 Spongiibacterium	fuscum
@@ -22385,6 +22577,7 @@ Stackebrandtia	cavernae
 Stackebrandtia	endophytica
 Stackebrandtia	nassauensis
 Stackebrandtia	soli
+Stagnihabitans	tardus
 Stagnimonas	aquatica
 Stakelama	algicida
 Stakelama	flava
@@ -22554,6 +22747,7 @@ Streptacidiphilus	pinicola
 Streptacidiphilus	rugosus
 Streptacidiphilus	torunensis
 Streptacidiphilus	toruniensis
+Streptantibioticus	cattleyicolor
 Streptimonospora	salina
 Streptoalloteichus	hindustanus
 Streptoalloteichus	tenebrarius
@@ -22704,6 +22898,7 @@ Streptococcus	tangierensis
 Streptococcus	thermophilus
 Streptococcus	thoraltensis
 Streptococcus	tigurinus
+Streptococcus	toyakuensis
 Streptococcus	troglodytae
 Streptococcus	troglodytidis
 Streptococcus	uberis
@@ -23212,6 +23407,7 @@ Streptomyces	luteosporeus
 Streptomyces	luteoverticillatus
 Streptomyces	luteus
 Streptomyces	lycii
+Streptomyces	lydicamycinicus
 Streptomyces	lydicus
 Streptomyces	macrosporus
 Streptomyces	malachitofuscus
@@ -23220,6 +23416,7 @@ Streptomyces	malaysiensis
 Streptomyces	manganisoli
 Streptomyces	mangrovi
 Streptomyces	manipurensis
+Streptomyces	marincola
 Streptomyces	marinus
 Streptomyces	marokkonensis
 Streptomyces	mashuensis
@@ -23447,6 +23644,7 @@ Streptomyces	sioyaensis
 Streptomyces	smaragdinus
 Streptomyces	smyrnaeus
 Streptomyces	sodiiphilus
+Streptomyces	solincola
 Streptomyces	solisilvae
 Streptomyces	somaliensis
 Streptomyces	sparsogenes
@@ -23769,6 +23967,7 @@ Sulfurimonas	denitrificans
 Sulfurimonas	gotlandica
 Sulfurimonas	indica
 Sulfurimonas	lithotrophica
+Sulfurimonas	marina
 Sulfurimonas	paralvinellae
 Sulfurimonas	xiamenensis
 Sulfurirhabdus	autotrophica
@@ -23807,6 +24006,7 @@ Sutcliffiella	cohnii
 Sutcliffiella	deserti
 Sutcliffiella	halmapala
 Sutcliffiella	horikoshii
+Sutcliffiella	rhizosphaerae
 Sutcliffiella	zhanjiangensis
 Sutterella	megalosphaeroides
 Sutterella	parvirubra
@@ -23847,8 +24047,10 @@ Symplocastrum	sauterianum
 Synechococcus	aeruginosus
 Synechococcus	amethystinus
 Synechococcus	arcuatus
+Synechococcus	bacillaris
 Synechococcus	bigranulatus
 Synechococcus	cedrorum
+Synechococcus	diatomicola
 Synechococcus	elongatus
 Synechococcus	eximius
 Synechococcus	gaarderi
@@ -23905,10 +24107,14 @@ Tabrizicola	algicola
 Tabrizicola	alkalilacus
 Tabrizicola	aquatica
 Tabrizicola	blastica
+Tabrizicola	flagellatus
 Tabrizicola	fusiformis
 Tabrizicola	oligotrophica
 Tabrizicola	piscis
+Tabrizicola	rongguiensis
 Tabrizicola	sediminis
+Tabrizicola	soli
+Tabrizicola	thermarum
 Taeania	maliponensis
 Taeseokella	kangwonensis
 Tagaea	marina
@@ -24126,6 +24332,8 @@ Tetragenococcus	koreensis
 Tetragenococcus	muriaticus
 Tetragenococcus	osmophilus
 Tetragenococcus	solitarius
+Tetrapedia	cruxmichaeli
+Tetrapedia	gothica
 Tetrarcus	ilsteri
 Tetrasphaera	australiensis
 Tetrasphaera	duodecadis
@@ -24845,6 +25053,7 @@ Trichocoleus	tenerrimus
 Trichocoleus	thermalis
 Trichocoleus	voukii
 Trichocoleus	wuitneri
+Trichocystis	gigantea
 Trichodesmium	clevei
 Trichodesmium	contortum
 Trichodesmium	erythraeum
@@ -24988,6 +25197,7 @@ Tychonema	ingricum
 Tychonema	rhodonema
 Tychonema	sequanum
 Tychonema	tenue
+Uliginosibacterium	aquaticum
 Uliginosibacterium	gangwonense
 Uliginosibacterium	paludis
 Uliginosibacterium	sediminicola
@@ -25258,6 +25468,7 @@ Vibrio	oceanisediminis
 Vibrio	olivae
 Vibrio	ordalii
 Vibrio	orientalis
+Vibrio	ostreae
 Vibrio	ostreicida
 Vibrio	ouci
 Vibrio	owensii
@@ -25297,6 +25508,7 @@ Vibrio	succinogenes
 Vibrio	superstes
 Vibrio	taketomensis
 Vibrio	tapetis
+Vibrio	tarriae
 Vibrio	tasmaniensis
 Vibrio	thalassae
 Vibrio	toranzoniae
@@ -25453,6 +25665,8 @@ Weissella	viridescens
 Weizmannia	acidiproducens
 Weizmannia	coagulans
 Weizmannia	ginsengihumi
+Wenjunlia	tyrosinilytica
+Wenjunlia	vitaminophila
 Wenxinia	marina
 Wenxinia	saemankumensis
 Wenyingzhuangia	aestuarii
@@ -25658,6 +25872,7 @@ Xenotholos	caeruleus
 Xenotholos	huastecanus
 Xenotholos	kerneri
 Xenotholos	starmachii
+Xiamenia	xianingshaonis
 Xiangella	phaseoli
 Xinfangfangia	humi
 Xinfangfangia	soli
@@ -25736,9 +25951,11 @@ Youngimonas	vesicularis
 Youxingia	wuxianensis
 Yuhushiella	deserti
 Zafaria	cholistanensis
+Zarconia	navalis
 Zavarzinella	formosa
 Zavarzinia	aquatilis
 Zavarzinia	compransoris
+Zavarzinia	marina
 Zeaxanthinibacter	aestuarii
 Zeaxanthinibacter	enoshimensis
 Zehria	floridana
