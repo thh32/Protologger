@@ -20,8 +20,8 @@ import random
 import string
 from datetime import date
 import os.path
-
-
+import shutil
+import concurrent.futures
 
 
 
@@ -62,30 +62,44 @@ def randomString(stringLength=8):
 
 
 
-# Command line use is by running python2.7 Protologger_v0-2.py -r [16S-file] -g [Genome-file]
+parser = argparse.ArgumentParser(description="Protologger v1.1: Automated Genomic Description")
+subparsers = parser.add_subparsers(dest="command", help="Available run modes")
 
-import argparse
-from subprocess import call
-import subprocess
 
-parser = argparse.ArgumentParser(description="Version 1.1 of Protologger") 
+parser_full = subparsers.add_parser("full", help="Run the complete Protologger pipeline")
+parser_full.add_argument("-r", type=str, action='store', required=True, dest='rRNA_gene', help="Input 16S rRNA gene sequence")
+parser_full.add_argument("-g", type=str, action='store', required=True, dest='genome', help="Input genome")
+parser_full.add_argument("-p", type=str, action='store', required=True, dest='project', help="Project name for output folder")
+parser_full.add_argument("-q", action='store_true', dest='quick', help="Run quick version (ignore GTDB-Tk and PhyloPhlAn)")
+parser_full.add_argument("-t", type=int, action='store', default=1, dest='threads', help="Number of threads to use (default: 1)")
 
-# Basic input output files
-parser.add_argument("-r", type=str, action='store', required=True,  dest='rRNA_gene', help="Input 16S rRNA gene sequence") # allows input of the forward read
-parser.add_argument("-g", type=str, action='store', required=True,  dest='genome', help="Input genome") # allows input of the forward read
-parser.add_argument("-p", type=str, action='store', required=True,  dest='project', help="Project name for output folder") # allows input of the forward read
-parser.add_argument("-q", action='store_true',  dest='quick', help="Run the quick version of Protologger (ignore GTDB-Tk and PhyloPhlAn)") # allows input of the forward read
-
+# 16S standalone
+parser_16s = subparsers.add_parser("16s", help="Run strictly the 16S taxonomic placement and chimera check")
+parser_16s.add_argument("-r", type=str, action='store', required=True, dest='rRNA_gene', help="Input 16S rRNA gene sequence")
+parser_16s.add_argument("-p", type=str, action='store', required=True, dest='project', help="Project name for output folder")
+parser_16s.add_argument("-t", type=int, action='store', default=1, dest='threads', help="Number of threads for IMNGS BLAST (default: 1)")
 
 args = parser.parse_args()
+threads = str(args.threads) 
 
+if args.command is None:
+    parser.print_help()
+    sys.exit(1)
 
+is_quick = getattr(args, 'quick', False)
 
-File_16S = str(args.rRNA_gene) #User input 16S
-genome_file = str(args.genome) #User input Genome
+File_16S = str(args.rRNA_gene)
+project_name = str(args.project)
+
+if args.command == "full":
+    genome_file = str(args.genome)
+    print ('Input genome file; ', genome_file)
+else:
+    genome_file = None
 
 print ('Input 16S file; ', File_16S)
-print ('Input genome file; ', genome_file)
+print ('Run mode selected: ', args.command.upper())
+
 
 code_path = os.path.abspath(os.path.dirname(sys.argv[0]) ).replace('/bin','/db') + '/'
 
@@ -118,55 +132,25 @@ print ('Project name is; ', project_name)
 #print sys.argv[2].split('/')
 #print sys.argv[2]
 
-bashCommand = 'mkdir -p '+ dir_path + project_name
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
+project_dir = os.path.join(dir_path, project_name)
 
 
-bashCommand = 'cp ' +  File_16S + ' '+ dir_path + project_name +'/'
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
-bashCommand = 'cp ' +  genome_file + ' '+ dir_path + project_name +'/'
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
+os.makedirs(project_dir, exist_ok=True)
+os.makedirs(os.path.join(project_dir, 'Genome_analysis'), exist_ok=True)
 
 
-bashCommand = 'cp ' + genome_file + ' ' + dir_path + project_name +'/' + genome_file.split('/')[-1:][0].replace('.dat','.fna').replace('.fasta','.fna').replace('.fa','.fna')
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
+shutil.copy(File_16S, project_dir)
+File16S = os.path.join(project_dir, os.path.basename(File_16S))
 
-File16S =  dir_path + project_name + '/' + File_16S.split('/')[-1:][0]
-genome_file = dir_path + project_name + '/' + genome_file.split('/')[-1:][0].replace('.dat','.fna')
+if args.command == "full":
+    shutil.copy(genome_file, project_dir)
+    
 
-
-
-#print 'Input 16S file; ', File_16S
-#print 'Input genome file; ', genome_file
-
-
-# Output is named the same as the input folder
-
-bashCommand = 'mkdir -p '+ dir_path + project_name
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
-
-bashCommand = 'chmod 777 '+ dir_path + project_name
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
-bashCommand = 'mkdir -p  ' + dir_path +project_name+'/Genome_analysis' 
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
+    base_genome_name = os.path.basename(genome_file)
+    new_genome_name = base_genome_name.replace('.dat', '.fna').replace('.fasta', '.fna').replace('.fa', '.fna')
+    shutil.copy(genome_file, os.path.join(project_dir, new_genome_name))
+    
+    genome_file = os.path.join(project_dir, new_genome_name)
 
 outputting_overview = open(dir_path +project_name+'/Overview.txt','w')
 
@@ -347,8 +331,21 @@ full_names = {}
 for line in open(code_path + 'bin/16S-SILVA/LTP-DB/LTP.fasta'):
     if line.startswith('>'):
         timber = line.split('\|')
-        full_names[timber[2]] = timber[3].split(' subsp')[0] + '--' + timber[4].replace('\n','').split(';')[4]
-
+        try:
+            seq_id = timber[2]
+            species_name = timber[3].split(' subsp')[0]
+            tax_levels = timber[4].replace('\n','').split(';')
+            
+            # Safely grab the 5th taxonomic level, or default to the deepest available
+            tax_target = tax_levels[4] if len(tax_levels) > 4 else tax_levels[-1]
+            
+            full_names[seq_id] = species_name + '--' + tax_target
+        except IndexError:
+            # If the database header format is completely missing columns, default it safely
+            try:
+                full_names[timber[2]] = "Unknown_Species--Unknown_Taxonomy"
+            except IndexError:
+                pass
 
 # Check the validity of the species names against the latest DSMZ database (every few months needs updating)
 # from https://www.dsmz.de/services/online-tools/prokaryotic-nomenclature-up-to-date/downloads
@@ -376,15 +373,21 @@ num = 0
 
 
 for seq in HTSeq.FastaReader(code_path + 'bin/16S-SILVA/LTP-DB/LTP.fasta'):
-    if seq.name.split('\|')[2] in top_50:
-        num +=1
-        #print 'Extracted 16S; ' ,num
-        name = full_names[seq.name.split('\|')[2]].replace(' ','_')
+    try:
+        seq_key = seq.name.split('\|')[2]
+    except IndexError:
+        seq_key = seq.name
+
+    if seq_key in top_50:
+        num += 1
+        # Use .get() to provide a safe fallback if the database header was malformed
+        name = full_names.get(seq_key, "Unknown_Species--Unknown_Taxonomy").replace(' ','_')
+        
         if name.split('--')[0] in Valid_names:
-            outputting.write('>' + name + '--' + seq.name.split('\|')[2] + '--Valid' + '\n')
+            outputting.write('>' + name + '--' + seq_key + '--Valid\n')
         else:
-            outputting.write('>' + name + '--' + seq.name.split('\|')[2] + '--NOT_VALID' + '\n')
-        #print (seq.seq.decode("utf-8"))
+            outputting.write('>' + name + '--' + seq_key + '--NOT_VALID\n')
+            
         outputting.write(seq.seq.decode("utf-8") + '\n')
         
 outputting.close()
@@ -433,7 +436,7 @@ outputting_overview.write('Protologger v1.1; Run date: ' + str(today) + '\n')
 
 
 
-if args.quick == True:
+if is_quick == True:
     outputting_overview.write('Quick version activated.\n')
 
 
@@ -492,29 +495,29 @@ elif completness_16S < 85.0:
 
 
 
-#############################################
-# 
-#       Chimera check
-#
-#######################
+# #############################################
+# # 
+# #       Chimera check
+# #
+# #######################
 
-#Run UCHIME
-bashCommand = 'usearch -uchime ' + File_16S + ' -db ' + code_path + 'bin/16S-SILVA/LTP-DB/LTPs132_SSU_compressed.fasta -uchimeout ' + dir_path + project_name + '/Chimera_check.txt' 
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
+# #Run UCHIME
+# bashCommand = 'usearch -uchime ' + File_16S + ' -db ' + code_path + 'bin/16S-SILVA/LTP-DB/LTPs132_SSU_compressed.fasta -uchimeout ' + dir_path + project_name + '/Chimera_check.txt' 
+# #print bashCommand
+# process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+# output, error = process.communicate()
 
-#time.sleep(30)
+# #time.sleep(30)
 
 
 
-for line in open(dir_path +project_name + '/Chimera_check.txt','r'):
-    if line.replace('\n','').split('\t')[-1:][0][0] == 'N':
-        #print 'The input 16S rRNA gene was not identified as a chimera.\n'
-        outputting_overview.write('The input 16S rRNA gene was not identified as a chimera.\n')
-    else:
-        #print 'WARNING: The input 16S rRNA gene was identified as a chimera, the following results may not be reliable due to this.\n'
-        outputting_overview.write('WARNING: The input 16S rRNA gene was identified as a chimera, the following results may not be reliable due to this.\n')
+# for line in open(dir_path +project_name + '/Chimera_check.txt','r'):
+#     if line.replace('\n','').split('\t')[-1:][0][0] == 'N':
+#         #print 'The input 16S rRNA gene was not identified as a chimera.\n'
+#         outputting_overview.write('The input 16S rRNA gene was not identified as a chimera.\n')
+#     else:
+#         #print 'WARNING: The input 16S rRNA gene was identified as a chimera, the following results may not be reliable due to this.\n'
+#         outputting_overview.write('WARNING: The input 16S rRNA gene was identified as a chimera, the following results may not be reliable due to this.\n')
 
 
 
@@ -528,7 +531,9 @@ for line in open(dir_path +project_name + '/Chimera_check.txt','r'):
 #       Check genome quality -- CheckM
 #
 #######################
-if args.quick == True:
+if args.command == "16s":
+    print ('Ignoring CheckM as 16s-only mode is active.')
+elif is_quick == True:
     print ('Ignoring checkM as quick flag is active.')
 else:
     #Run GTDB-TK
@@ -912,7 +917,7 @@ outputting.close()
 
 
 # Conduct alignment
-bashCommand = 'muscle -in ' + dir_path +project_name+'/Combined.fasta -out ' + dir_path +project_name+'/Combined.afa -maxiters 10 -quiet'  
+bashCommand = 'muscle -align ' + dir_path +project_name+'/Combined.fasta -output ' + dir_path +project_name+'/Combined.afa'
 #print bashCommand
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
@@ -939,16 +944,80 @@ bashCommand = 'rm ' + dir_path +project_name+'/Combined.afa'
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 
+#################################
+#
+# IMNGS
+#
+############
 
+# outputting_overview.write('\n\nEcological analysis\n')
+# outputting_overview.write('-------------------\n\n')
 
+# bashCommand = 'mkdir -p  ' + dir_path +project_name+'/IMNGS-analysis' 
+# process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+# output, error = process.communicate()
 
+# for cenv in glob.glob(code_path + 'bin/IMNGS/FASTA-1000_files/FASTA_files/*.fasta'):
+#     bashCommand = 'blastn -subject ' + File_16S + '  -qcov_hsp_perc 80.0 -evalue 0.0000000000000000000000001 -perc_identity 97.0 -strand both -outfmt 6 -query '+cenv+' -out ' + dir_path +project_name+'/IMNGS-analysis/' + cenv.split('/')[-1:][0].replace('.fasta','.m8') 
+#     process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+#     output, error = process.communicate()
 
+# matched_otus = {}
+# for cfile in glob.glob(dir_path +project_name+'/IMNGS-analysis/*.m8'):
+#     env = cfile.split('/')[-1:][0].replace('.m8','')
+#     matches = []
+#     for line in open(cfile,'r'):
+#         matches.append(line.split('\t')[0].split(';')[0])
+#     matched_otus[env] = matches
 
+# with open(code_path + 'bin/IMNGS/FASTA-1000_files/Abundance_profiles/IMNGS_abundance_values.pickle', 'rb') as handle:
+#     abundances = pickle.load(handle, encoding='latin1')
 
+# prev = {} 
+# for env,otus in matched_otus.items():
+#     samples = []
+#     for i in otus:
+#         sample = i.split('.')[0]
+#         if sample not in samples:
+#             samples.append(sample)
+#     prev[env] = samples
 
+# remove_samples = []
+# abund = {}
+# for env,otus in matched_otus.items():
+#     samples = {}
+#     for i in otus:
+#         sample = i.split('.')[0]
+#         try:
+#             abun = abundances[i]
+#             if sample in samples:
+#                 samples[sample] += abun
+#             else:
+#                 samples[sample] = abun
+#         except:
+#             if sample not in remove_samples:
+#                 remove_samples.append(sample)
+#     abund[env] = samples
 
+# abundance = {}
+# for env,samples in abund.items():
+#     total = []
+#     for i in samples.values():
+#         total.append(i)
+#     if len(samples.keys()) == 0:
+#         abundance[env] = [0.0, 0.0]
+#     else:
+#         abundance[env] = [np.mean(total),np.std(total)]
 
+# for k,v in prev.items():
+#     try:
+#         abun = abundance[k][0]
+#         stdev = abundance[k][1]
+#         outputting_overview.write('The isolate was detected in ' + str("{:.2f}".format((float(len(v))/1000)*100)) + '% of 1,000 amplicon samples from the ' + k.split('-')[0].replace('_',' ') + ' at a mean relative abundance of ' + str("{:.2f}".format(abun)) + '% with a standard deviation of ' + str("{:.2f}".format(stdev)) + '%.\n')
+#     except:
+#         outputting_overview.write('The isolate was detected in ' + str("{:.2f}".format((float(len(v))/1000)*100))  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples.\n')
 
+# outputting_overview.flush()
 
 
 
@@ -1008,11 +1077,303 @@ output, error = process.communicate()
 
 
 
+
+
+
+
+
+#################################
+#
+# IMNGS
+#
+############
+
+
+    
+outputting_overview.write('\n\n')
+
+bashCommand = 'mkdir -p  ' + dir_path +project_name+'/IMNGS-analysis' 
+#print bashCommand
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
+
+    
+
+
+
+# for cenv in glob.glob(code_path + 'bin/IMNGS/FASTA-1000_files/FASTA_files/*.fasta'):
+#     bashCommand = 'blastn -subject ' + File_16S + '  -qcov_hsp_perc 80.0 -evalue 0.0000000000000000000000001 -perc_identity 97.0 -strand both -outfmt 6 -query '+cenv+' -out ' + dir_path +project_name+'/IMNGS-analysis/' + cenv.split('/')[-1:][0].replace('.fasta','.m8') 
+#     print (bashCommand)
+#     process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+#     output, error = process.communicate()
+
+def run_imngs_blast(cenv):
+    bashCommand = 'blastn -subject ' + File_16S + '  -qcov_hsp_perc 80.0 -evalue 0.0000000000000000000000001 -perc_identity 97.0 -strand both -outfmt 6 -query '+cenv+' -out ' + dir_path +project_name+'/IMNGS-analysis/' + cenv.split('/')[-1:][0].replace('.fasta','.m8') 
+    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+    process.communicate()
+
+cenv_files = glob.glob(code_path + 'bin/IMNGS/FASTA-1000_files/FASTA_files/*.fasta')
+
+print('Running IMNGS ecological BLAST using ' + threads + ' threads...')
+with concurrent.futures.ThreadPoolExecutor(max_workers=int(threads)) as executor:
+    executor.map(run_imngs_blast, cenv_files)
+
+
+
+matched_otus = {}
+
+for cfile in glob.glob(dir_path +project_name+'/IMNGS-analysis/*.m8'):
+    env = cfile.split('/')[-1:][0].replace('.m8','')
+    matches = []
+    for line in open(cfile,'r'):
+        matches.append(line.split('\t')[0].split(';')[0])
+    matched_otus[env] = matches
+
+
+with open(code_path + 'bin/IMNGS/FASTA-1000_files/Abundance_profiles/IMNGS_abundance_values.pickle', 'rb') as handle:
+    abundances = pickle.load(handle, encoding='latin1')
+
+
+# Prevalance
+
+prev = {} #define which samples belong to which environment
+
+for env,otus in matched_otus.items():
+    samples = []
+    for i in otus:
+        sample = i.split('.')[0]
+        if sample not in samples:
+            samples.append(sample)
+    prev[env] = samples
+
+
+
+# abundance calculation
+remove_samples = []
+
+abund = {}
+for env,otus in matched_otus.items():
+    samples = {}
+    for i in otus:
+        sample = i.split('.')[0]
+        try:
+            abun = abundances[i]
+            if sample in samples:
+                samples[sample] += abun
+            else:
+                samples[sample] = abun
+        except:
+            lw = 0
+            ##print sample, i
+            if sample not in remove_samples:
+                remove_samples.append(sample)
+    abund[env] = samples
+
+
+
+abundance = {}
+
+for env,samples in abund.items():
+    total = []
+    for i in samples.values():
+        total.append(i)
+    if len(samples.keys()) == 0:
+        abundance[env] = [0.0, 0.0]
+    else:
+        abundance[env] = [np.mean(total),np.std(total)]
+
+
+for k,v in prev.items():
+    try:
+        abun = abundance[k][0]
+        stdev = abundance[k][1]
+        outputting_overview.write('The isolate was detected in ' + str("{:.2f}".format((float(len(v))/1000)*100)) + '% of 1,000 amplicon samples from the ' + k.split('-')[0].replace('_',' ') + ' at a mean relative abundance of ' + str("{:.2f}".format(abun)) + '% with a standard deviation of ' + str("{:.2f}".format(stdev)) + '%.\n')
+        #print 'The isolate was detected in ' + str((float(len(v))/1000)*100)  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples at a mean relative abundance of ' + str("{:.2f}".format(abun)) + '% with a standard deviation of ' + str("{:.2f}".format(stdev)) + '%.\n'
+    except:
+        outputting_overview.write('The isolate was detected in ' + str("{:.2f}".format((float(len(v))/1000)*100))  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples.\n')
+        #print 'The isolate was detected in ' + str((float(len(v))/1000)*100)  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples.\n'
+
+
+outputting_overview.flush()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# outputting_overview.flush()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# #print 'Analysis complete'
+
+
+
+if args.command == "16s":
+    print("16S standalone and IMNGS ecology analysis complete. Cleaning up temp files and exiting.")
+    outputting_overview.close()
+    temp_files = [
+        'LTP-matches.m8', 
+        'Matching-16S-sequences.fasta', 
+        'Chimera_check.txt'
+    ]
+    for temp in temp_files:
+        try:
+            os.remove(os.path.join(dir_path, project_name, temp))
+        except OSError:
+            pass
+            
+    sys.exit(0)
 
 outputting_overview.write('\n\nGenome analysis\n')
 outputting_overview.write('---------------\n\n')
+# MAG database
+output_mash = open(dir_path + 'output-' + project_name + '.sh','w')
+bashCommand = 'mash dist ' + code_path + 'bin/MAG_database/MAG_MASH_all.msh ' + genome_file + ' -t > ' + dir_path + project_name + '/MAG_MASH.txt'
+output_mash.write(bashCommand )
+output_mash.close()
+new_command = 'bash '+ dir_path + 'output-' + project_name +'.sh '
+process = subprocess.Popen(new_command.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
+bashCommand = 'rm '+ dir_path + 'output-' + project_name + '.sh '
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
 
+# MAG database Version2
+output_mash = open(dir_path + 'output-' + project_name + '.sh','w')
+bashCommand = 'mash dist ' + code_path + 'bin/MAG_database/MAG_MASH_all_V2.msh ' + genome_file + ' -t > ' + dir_path + project_name + '/MAG_MASH_v2.txt'
+output_mash.write(bashCommand )
+output_mash.close()
+new_command = 'bash '+ dir_path + 'output-' + project_name +'.sh '
+process = subprocess.Popen(new_command.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
+bashCommand = 'rm '+ dir_path + 'output-' + project_name + '.sh '
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
 
+MASH_values = {}
+matched_genomes = {}
+ln = 0
+for line in open(dir_path +project_name + '/MAG_MASH.txt','r'):
+    ln +=1
+    timber = line.split('\t')
+    if ln == 1:
+        for num, splinter in enumerate(timber):
+            MASH_values[num] = [splinter]
+    if ln == 2:
+        for num, splinter in enumerate(timber):
+            if num > 0:
+                if float(splinter) < 0.05:
+                    matched_genomes[MASH_values[num][0].split('/')[-1:][0]] = float(splinter)
+    
+ln = 0
+for line in open(dir_path +project_name + '/MAG_MASH_v2.txt','r'):
+    ln +=1
+    timber = line.split('\t')
+    if ln == 1:
+        for num, splinter in enumerate(timber):
+            MASH_values[num] = [splinter]
+    if ln == 2:
+        for num, splinter in enumerate(timber):
+            if num > 0:
+                if float(splinter) < 0.05:
+                    matched_genomes[MASH_values[num][0].split('/')[-1:][0]] = float(splinter)
+    
+mag_data = {}
+for line in open(code_path + 'bin/MAG_database/Meta_data_combined.txt','r'):
+        mag, group, paper, metadata = line.replace('\n','').split('\t')
+        mag_data[mag] = [group,paper,metadata]
+        
+for line in open(code_path + 'bin/MAG_database/All_MAGs_listed.txt','r'):
+        group,paper,mag= line.replace('\n','').replace('_etal_','_et_al_').split('/')
+        mag_data[mag] = [group,paper]
+
+updated_mag = {}
+group_info = {}
+ln = 0
+for line in open(code_path + 'bin/MAG_database/Meta_data_combined_V2.txt'):
+    ln +=1
+    if ln > 1:
+        timber = line.replace('\n','').split('\t')
+        new_group = timber[1].replace(' ','_') + ';' + timber[2].replace(' ','_') + ';' + timber[3].replace(' ','_') + ';' + timber[4].replace(' ','_') + ';' + timber[5].replace(' ','_')
+        paper = timber[9].replace(' ','_')
+        group_info[new_group] = paper
+        for mag, data in mag_data.items():
+            if data[0].replace(' ','_') == new_group.split(';')[4]:
+                if data[1] == paper:
+                    updated_mag[mag] = [new_group, paper]
+
+for mag, data in mag_data.items():
+    if data[0] == 'Primates':
+        try:
+            species = data[2].split(',')[0].split(';')[1].capitalize().replace(' ','_')
+            for new_group, paper in group_info.items():
+                if species in new_group:
+                    updated_mag[mag] = [new_group,paper]
+        except:
+            updated_mag[mag] = ['Host-associated;Microbiota;Animal;Stool;Macaca_fascicularis','Manara_et_al_2019']
+    if data[0] == 'Human':
+        if data[1] == 'Pasolli_et_al_2019':
+            if 'LiJ_2014' in mag:
+                updated_mag[mag] = ['Host-associated;Microbiota;Animal;Stool;Human','Pasolli_et_al_2019']
+            else:
+                try:
+                    body_site = data[2].split(',')[0].split(';')[1].capitalize().replace(' ','_')
+                    for new_group, paper in group_info.items():
+                        if body_site in new_group:
+                            updated_mag[mag] = [new_group,paper]
+                except:
+                    if 'BritoIL_2016' in mag:
+                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;NA;Human','Pasolli_et_al_2019']
+                    elif 'VincentC_2016' in mag or 'RaymondF_2016' in mag or 'KosticAD_2015' in mag or 'VatanenT_2016' in mag or 'IjazUZ_2017' in mag or 'ZeeviD_2015' in mag or 'SmitsSA_2017' in mag or 'Bengtsson-PalmeJ_2015' in mag:
+                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;Stool;Human','Pasolli_et_al_2019']
+                    elif 'OhJ_2014' in mag:
+                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;Skin;Human','Pasolli_et_al_2019']
+                    elif 'Castro-NallarE_2015' in mag:
+                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;Oral_cavity;Human','Pasolli_et_al_2019']
+
+MAG_output = open(dir_path +project_name + '/MAG_comparison_overview.tab','w')
+MAG_output.write('#MAG-ID\tHost-environment\tStudy\tSample meta-data\tMASH distance\n')
+
+for mag, data in updated_mag.items():
+    if mag in matched_genomes.keys():
+        MAG_output.write(mag + '\t' + data[0] + '\t' + data[1] + '\t' + str(matched_genomes[mag]) +'\n')
+
+MAG_output.close()
+
+if len(matched_genomes) > 0:
+    outputting_overview.write('Metagenomic reconstructed genomes (MAGs) clustering with your isolates genome were identified, in total '+ str(len(matched_genomes)) + ' MAGs were identified \n')
+else:
+    outputting_overview.write('No metagenomic reconstructed genomes (MAGs) matching your genome were identified.\n')
+
+outputting_overview.flush()
 
 
 
@@ -1395,19 +1756,23 @@ outputting_gc_content.close()
 #
 #######################
 
-
 outputting = open(dir_path +project_name+'/comparison_list.txt','w')
+comparison_files = glob.glob(dir_path +project_name+'/Genome_analysis/*.fna')
 
-for cfile in glob.glob(dir_path +project_name+'/Genome_analysis/*.fna'):
+for cfile in comparison_files:
     outputting.write(cfile + '\n')
     
 outputting.close()
 
+open(dir_path + project_name + '/ANI_values.tab', 'w').close()
 
-bashCommand = 'fastANI -q '+genome_file+' --rl ' + dir_path +project_name+'/comparison_list.txt -o ' + dir_path +project_name+'/ANI_values.tab'
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-time.sleep(120)
+# Only run fastANI if there are actually reference genomes to compare against
+if len(comparison_files) > 0:
+    bashCommand = 'fastANI -q '+genome_file+' --rl ' + dir_path +project_name+'/comparison_list.txt -o ' + dir_path +project_name+'/ANI_values.tab'
+    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+    process.communicate() 
+else:
+    print('No reference genomes extracted from GTDB-Tk.')
 
 
 
@@ -1549,7 +1914,7 @@ for line in open(dir_path +project_name+'/PROKKA-annotation/Isolate.log'):
 #       Create genome based tree
 #
 #######################
-if args.quick == True:
+if is_quick == True:
     print ('Ignoring genome tree as quick option active.')
 else:
     bashCommand = 'mkdir -p  ' + dir_path +project_name+'/Genome_Tree' 
@@ -1655,7 +2020,7 @@ else:
 #outputting_overview.write('-----------------\n\n')
 
 
-if args.quick == True:
+if is_quick == True:
     print ('Ignoring POCP calculation as quick option active.')
 else:
     genomes = []
@@ -2850,338 +3215,16 @@ if len(CBMs) > 0:
 
 
 
-########################################################################################################################################################
-#
-#
-#
-#
-#
-#
-#
-#    Ecology
-#
-#
-#
-#
-#
-#
-#
-####################################################################
-outputting_overview.write('\n\nEcological analysis\n')
-outputting_overview.write('-------------------\n\n')
 
 
 
-# MAG database
-output_mash = open(dir_path + 'output-' + project_name + '.sh','w')
-bashCommand = 'mash dist ' + code_path + 'bin/MAG_database/MAG_MASH_all.msh ' + genome_file + ' -t > ' + dir_path + project_name + '/MAG_MASH.txt'
-#print bashCommand
-output_mash.write(bashCommand )
-output_mash.close()
-new_command = 'bash '+ dir_path + 'output-' + project_name +'.sh '
-process = subprocess.Popen(new_command.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-bashCommand = 'rm '+ dir_path + 'output-' + project_name + '.sh '
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
 
 
-# MAG database Version2
-output_mash = open(dir_path + 'output-' + project_name + '.sh','w')
-bashCommand = 'mash dist ' + code_path + 'bin/MAG_database/MAG_MASH_all_V2.msh ' + genome_file + ' -t > ' + dir_path + project_name + '/MAG_MASH_v2.txt'
-#print bashCommand
-output_mash.write(bashCommand )
-output_mash.close()
-new_command = 'bash '+ dir_path + 'output-' + project_name +'.sh '
-process = subprocess.Popen(new_command.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-bashCommand = 'rm '+ dir_path + 'output-' + project_name + '.sh '
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
 
-MASH_values = {}
 
-matched_genomes = {}
 
-ln = 0
 
-for line in open(dir_path +project_name + '/MAG_MASH.txt','r'):
-    ln +=1
-    timber = line.split('\t')
-    if ln == 1:
-        for num, splinter in enumerate(timber):
-            MASH_values[num] = [splinter]
-    if ln == 2:
-        for num, splinter in enumerate(timber):
-            if num > 0:
-                if float(splinter) < 0.05:
-                    #print MASH_values[num]
-                    #print MASH_values[num][0].split('/')[-1:][0][0]
-                    matched_genomes[MASH_values[num][0].split('/')[-1:][0]] = float(splinter)
-    
-ln = 0
 
-for line in open(dir_path +project_name + '/MAG_MASH_v2.txt','r'):
-    ln +=1
-    timber = line.split('\t')
-    if ln == 1:
-        for num, splinter in enumerate(timber):
-            MASH_values[num] = [splinter]
-    if ln == 2:
-        for num, splinter in enumerate(timber):
-            if num > 0:
-                if float(splinter) < 0.05:
-                    #print MASH_values[num]
-                    #print MASH_values[num][0].split('/')[-1:][0][0]
-                    matched_genomes[MASH_values[num][0].split('/')[-1:][0]] = float(splinter)
-    
-
-
-mag_data = {}
-
-
-for line in open(code_path + 'bin/MAG_database/Meta_data_combined.txt','r'):
-        mag, group, paper, metadata = line.replace('\n','').split('\t')
-        mag_data[mag] = [group,paper,metadata]
-        
-for line in open(code_path + 'bin/MAG_database/All_MAGs_listed.txt','r'):
-        group,paper,mag= line.replace('\n','').replace('_etal_','_et_al_').split('/')
-        mag_data[mag] = [group,paper]
-
-
-
-updated_mag = {}
-
-group_info = {}
-
-ln = 0
-for line in open(code_path + 'bin/MAG_database/Meta_data_combined_V2.txt'):
-    ln +=1
-    if ln > 1:
-        timber = line.replace('\n','').split('\t')
-        new_group = timber[1].replace(' ','_') + ';' + timber[2].replace(' ','_') + ';' + timber[3].replace(' ','_') + ';' + timber[4].replace(' ','_') + ';' + timber[5].replace(' ','_')
-        #print (new_group)
-        paper = timber[9].replace(' ','_')
-        #print (paper)
-        group_info[new_group] = paper
-        for mag, data in mag_data.items():
-            if data[0].replace(' ','_') == new_group.split(';')[4]:
-                if data[1] == paper:
-                    updated_mag[mag] = [new_group, paper]
-                    
-
-                    
-
-                    
-
-
-for mag, data in mag_data.items():
-    if data[0] == 'Primates':
-        #print mag, data
-        try:
-            species = data[2].split(',')[0].split(';')[1].capitalize().replace(' ','_')
-            #print species
-            for new_group, paper in group_info.items():
-                if species in new_group:
-                    updated_mag[mag] = [new_group,paper]
-        except:
-            updated_mag[mag] = ['Host-associated;Microbiota;Animal;Stool;Macaca_fascicularis','Manara_et_al_2019']
-    if data[0] == 'Human':
-        if data[1] == 'Pasolli_et_al_2019':
-            #print mag
-            #print data
-            #print data[2]
-            if 'LiJ_2014' in mag:
-                updated_mag[mag] = ['Host-associated;Microbiota;Animal;Stool;Human','Pasolli_et_al_2019']
-            else:
-                try:
-                    body_site = data[2].split(',')[0].split(';')[1].capitalize().replace(' ','_')
-                    #print species
-                    for new_group, paper in group_info.items():
-                        if body_site in new_group:
-                            updated_mag[mag] = [new_group,paper]
-                except:
-                    if 'BritoIL_2016' in mag:
-                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;NA;Human','Pasolli_et_al_2019']
-                    elif 'VincentC_2016' in mag or 'RaymondF_2016' in mag or 'KosticAD_2015' in mag or 'VatanenT_2016' in mag or 'IjazUZ_2017' in mag or 'ZeeviD_2015' in mag or 'SmitsSA_2017' in mag or 'Bengtsson-PalmeJ_2015' in mag:
-                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;Stool;Human','Pasolli_et_al_2019']
-                    elif 'OhJ_2014' in mag:
-                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;Skin;Human','Pasolli_et_al_2019']
-                    elif 'Castro-NallarE_2015' in mag:
-                        updated_mag[mag] = ['Host-associated;Microbiota;Animal;Oral_cavity;Human','Pasolli_et_al_2019']
-
-MAG_output = open(dir_path +project_name + '/MAG_comparison_overview.tab','w')
-
-MAG_output.write('#MAG-ID\tHost-environment\tStudy\tSample meta-data\tMASH distance\n')
-
-for mag, data in updated_mag.items():
-    if mag in matched_genomes.keys():
-        MAG_output.write(mag + '\t' + data[0] + '\t' + data[1] + '\t' + str(matched_genomes[mag]) +'\n')
-
-MAG_output.close()
-
-
-if len(matched_genomes) > 0:
-    outputting_overview.write('Metagenomic reconstructed genomes (MAGs) clustering with your isolates genome were identified, in total '+ str(len(matched_genomes)) + ' MAGs were identified \n')
-else:
-    outputting_overview.write('No metagenomic reconstructed genomes (MAGs) matching your genome were identified.\n')
-
-
-
-
-
-
-
-
-
-#################################
-#
-# IMNGS
-#
-############
-
-
-    
-outputting_overview.write('\n\n')
-
-bashCommand = 'mkdir -p  ' + dir_path +project_name+'/IMNGS-analysis' 
-#print bashCommand
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
-    
-
-
-
-for cenv in glob.glob(code_path + 'bin/IMNGS/FASTA-1000_files/FASTA_files/*.fasta'):
-    bashCommand = 'blastn -subject ' + File_16S + '  -qcov_hsp_perc 80.0 -evalue 0.0000000000000000000000001 -perc_identity 97.0 -strand both -outfmt 6 -query '+cenv+' -out ' + dir_path +project_name+'/IMNGS-analysis/' + cenv.split('/')[-1:][0].replace('.fasta','.m8') 
-    print (bashCommand)
-    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-
-
-
-
-
-matched_otus = {}
-
-for cfile in glob.glob(dir_path +project_name+'/IMNGS-analysis/*.m8'):
-    env = cfile.split('/')[-1:][0].replace('.m8','')
-    matches = []
-    for line in open(cfile,'r'):
-        matches.append(line.split('\t')[0].split(';')[0])
-    matched_otus[env] = matches
-
-
-with open(code_path + 'bin/IMNGS/FASTA-1000_files/Abundance_profiles/IMNGS_abundance_values.pickle', 'rb') as handle:
-    abundances = pickle.load(handle, encoding='latin1')
-
-
-# Prevalance
-
-prev = {} #define which samples belong to which environment
-
-for env,otus in matched_otus.items():
-    samples = []
-    for i in otus:
-        sample = i.split('.')[0]
-        if sample not in samples:
-            samples.append(sample)
-    prev[env] = samples
-
-
-
-# abundance calculation
-remove_samples = []
-
-abund = {}
-for env,otus in matched_otus.items():
-    samples = {}
-    for i in otus:
-        sample = i.split('.')[0]
-        try:
-            abun = abundances[i]
-            if sample in samples:
-                samples[sample] += abun
-            else:
-                samples[sample] = abun
-        except:
-            lw = 0
-            ##print sample, i
-            if sample not in remove_samples:
-                remove_samples.append(sample)
-    abund[env] = samples
-
-
-
-abundance = {}
-
-for env,samples in abund.items():
-    total = []
-    for i in samples.values():
-        total.append(i)
-    if len(samples.keys()) == 0:
-        abundance[env] = [0.0, 0.0]
-    else:
-        abundance[env] = [np.mean(total),np.std(total)]
-
-
-for k,v in prev.items():
-    try:
-        abun = abundance[k][0]
-        stdev = abundance[k][1]
-        outputting_overview.write('The isolate was detected in ' + str("{:.2f}".format((float(len(v))/1000)*100)) + '% of 1,000 amplicon samples from the ' + k.split('-')[0].replace('_',' ') + ' at a mean relative abundance of ' + str("{:.2f}".format(abun)) + '% with a standard deviation of ' + str("{:.2f}".format(stdev)) + '%.\n')
-        #print 'The isolate was detected in ' + str((float(len(v))/1000)*100)  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples at a mean relative abundance of ' + str("{:.2f}".format(abun)) + '% with a standard deviation of ' + str("{:.2f}".format(stdev)) + '%.\n'
-    except:
-        outputting_overview.write('The isolate was detected in ' + str("{:.2f}".format((float(len(v))/1000)*100))  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples.\n')
-        #print 'The isolate was detected in ' + str((float(len(v))/1000)*100)  + '% of ' + k.split('-')[0].replace('_',' ') + ' samples.\n'
-
-
-outputting_overview.flush()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-outputting_overview.flush()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#print 'Analysis complete'
-
-
-
-outputting_overview.close()
 
 
 
